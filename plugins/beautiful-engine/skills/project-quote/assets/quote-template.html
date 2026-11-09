@@ -1,0 +1,84 @@
+<!doctype html>
+<!-- Quote / SOW. Paste the three blocks from quote_calc.py where marked; fill every {{placeholder}}. See references/rendering.md. -->
+<html lang="en"><head><meta charset="utf-8">
+<title>{{Studio}} — Quote for {{Client}}</title>
+<!-- FONT LINKS (scripts/fonts.py) -->
+<link rel="stylesheet" href="base.css">
+<!-- TOKENS (scripts/tokens.py) -->
+<style>
+  .letterhead { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2pt solid var(--brand); padding-bottom: 12pt; margin-bottom: 18pt; }
+  .letterhead .studio { font-family: var(--font-display); font-weight: var(--display-weight); font-size: 17pt; letter-spacing: var(--display-tracking); color: var(--brand); }
+  .letterhead .studio img { height: 0.5in; }
+  .letterhead .contact { text-align: right; font-size: 8.5pt; color: var(--muted); line-height: 1.5; }
+  .doc-title { font-family: var(--font-display); font-weight: var(--display-weight); font-size: 26pt; letter-spacing: var(--display-tracking); line-height: 1.1; margin: 0 0 4pt; }
+  .total-box { background: var(--brand); color: var(--brand-ink); border-radius: var(--radius); padding: 14pt 16pt; }
+  .total-box .k { font-family: var(--font-label); font-size: 8pt; letter-spacing: .12em; text-transform: uppercase; opacity: .85; }
+  .total-box .v { font-family: var(--font-display); font-weight: var(--display-weight); font-size: 24pt; margin-top: 2pt; }
+  table.summary { margin-top: 6pt; }
+  .doc-kicker { font-family: var(--font-label); font-size: 8pt; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 4pt; }
+  .sign { display: grid; grid-template-columns: 1fr 1fr; gap: 28pt; margin-top: 20pt; break-inside: avoid; }
+  .sign div { border-top: 0.9pt solid var(--ink); padding-top: 5pt; font-size: 8.5pt; color: var(--muted); }
+  .sign .line { height: 34pt; }
+</style>
+</head><body>
+
+<div class="letterhead">
+  <div class="studio">{{Studio name, or <img src="logo.png" alt="Studio name"> if they attached their logo}}</div>
+  <div class="contact">{{Studio contact: name, email, website, phone}}</div>
+</div>
+
+<div class="cols" style="grid-template-columns: 2fr 1fr; align-items: end;">
+  <div>
+    <div class="doc-kicker">Proposal and estimate</div>
+    <h1 class="doc-title">{{Project name}}</h1>
+    <p class="lede">Prepared for {{Client contact, Company}}</p>
+    <p class="small muted">Quote {{Q-YYYYMMDD-01}} · {{Month D, YYYY}} · Valid until {{Month D, YYYY}}</p>
+  </div>
+  <div class="total-box"><div class="k">Total</div><div class="v">{{total from quote_calc.py}}</div><div class="small">{{payment schedule in one line}}</div></div>
+</div>
+
+<h3><span class="num">01</span>What we'll make</h3>
+<p>{{Two or three sentences: the goal, what the client gets, and when.}}</p>
+<table class="glance">
+  <tr><th>{{Deliverable}}</th><td>{{what it includes, formats, quantities}}</td></tr>
+</table>
+
+<h3><span class="num">02</span>Summary</h3>
+<!-- SUMMARY block from quote_calc.py -->
+{{summary table}}
+
+<h3><span class="num">03</span>Scope and estimate by phase</h3>
+<!-- For each phase: a sentence on what happens and what the client reviews, then that phase's table from the ESTIMATE block. -->
+<p><b>{{Phase}}.</b> {{what happens, what the client reviews, and when}}</p>
+{{phase tables}}
+
+<h3><span class="num">04</span>Timeline</h3>
+<div class="timeline">
+  <div class="tl"><div class="when">{{Week 1–2}}</div><div>{{phase and review point}}</div></div>
+</div>
+
+<h3><span class="num">05</span>Assumptions</h3>
+<ul><li>{{e.g. Client provides feedback within 3 business days of each review}}</li><li>{{Two rounds of revisions per deliverable}}</li></ul>
+
+<h3><span class="num">06</span>Not included</h3>
+<ul><li>{{e.g. Printing, stock imagery and font licenses, billed at cost if needed}}</li></ul>
+
+<h3><span class="num">07</span>Payment</h3>
+<!-- PAYMENTS block from quote_calc.py -->
+{{payment table}}
+<p class="small">{{Invoices due net 15. Pass-through costs billed as incurred.}}</p>
+
+<h3><span class="num">08</span>Terms</h3>
+<div class="small">
+  <p><b>Changes.</b> {{Work outside this scope is quoted separately and approved in writing before it starts.}}</p>
+  <p><b>Ownership.</b> {{Final approved deliverables transfer to the client on full payment. The studio may show the work in its portfolio unless agreed otherwise.}}</p>
+  <p><b>Cancellation.</b> {{If the project stops early, the client pays for work completed to date.}}</p>
+  <p><b>Validity.</b> {{This quote is valid for 30 days.}}</p>
+</div>
+
+<div class="sign">
+  <div><div class="line"></div>{{Client name, title}} · Date</div>
+  <div><div class="line"></div>{{Studio contact name}}, {{Studio}} · Date</div>
+</div>
+
+</body></html>

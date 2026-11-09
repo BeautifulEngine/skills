@@ -1,0 +1,44 @@
+<!doctype html>
+<!-- One-page rate card. Fill every {{placeholder}}. See references/rendering.md. -->
+<html lang="en"><head><meta charset="utf-8">
+<title>{{Studio}} — Rate Card {{YYYY}}</title>
+<!-- FONT LINKS (scripts/fonts.py) -->
+<link rel="stylesheet" href="base.css">
+<!-- TOKENS (scripts/tokens.py) -->
+<style>
+  .head { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2pt solid var(--brand); padding-bottom: 10pt; margin-bottom: 16pt; }
+  .head h1 { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--display-tracking); font-size: 28pt; margin: 0; line-height: 1; }
+  .head .studio { font-family: var(--font-label); font-size: 8.5pt; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 6pt; }
+  .head img { height: 0.5in; }
+  .rate { font-family: var(--font-display); font-weight: var(--display-weight); font-size: 15pt; color: var(--brand); white-space: nowrap; }
+  .svc td { vertical-align: top; }
+</style>
+</head><body>
+
+<div class="head">
+  <div><div class="studio">{{Studio name, or <img src="logo.png" alt="Studio name">}}</div><h1>Rate card {{YYYY}}</h1></div>
+  <div class="small muted" style="text-align:right">{{name · email · website}}</div>
+</div>
+
+<p class="lede">{{One or two sentences: what the studio does and for whom.}}</p>
+
+<h3><span class="num">01</span>Time-based</h3>
+<table class="data svc">
+  <thead><tr><th>Role</th><th>What it covers</th><th class="num">Hourly</th><th class="num">Day</th></tr></thead>
+  <tbody><tr><td><b>{{Role}}</b></td><td>{{…}}</td><td class="num rate">{{$}}</td><td class="num rate">{{$}}</td></tr></tbody>
+</table>
+
+<h3><span class="num">02</span>Projects</h3>
+<table class="data svc">
+  <thead><tr><th>Service</th><th>Typically includes</th><th class="num">From</th></tr></thead>
+  <tbody><tr><td><b>{{Service}}</b></td><td>{{…}}</td><td class="num rate">{{$}}</td></tr></tbody>
+</table>
+
+<h3><span class="num">03</span>Good to know</h3>
+<div class="cols">
+  <div class="card plain"><h4>Working together</h4><ul><li>{{minimum engagement}}</li><li>{{revisions included}}</li><li>{{rush fee}}</li></ul></div>
+  <div class="card plain"><h4>Payment</h4><ul><li>{{deposit}}</li><li>{{invoice terms}}</li><li>{{pass-through costs}}</li></ul></div>
+</div>
+
+<p class="small muted" style="margin-top:14pt">Rates valid through {{Month YYYY}}. Every project gets a written quote before work starts.</p>
+</body></html>

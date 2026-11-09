@@ -1,0 +1,69 @@
+<!doctype html>
+<!-- Brand snapshot, two pages. Paste the swatch table from palette.py; fill every {{placeholder}}. See references/rendering.md. -->
+<html lang="en"><head><meta charset="utf-8">
+<title>{{Brand}} — Brand Snapshot</title>
+<!-- FONT LINKS (scripts/fonts.py) -->
+<link rel="stylesheet" href="base.css">
+<!-- TOKENS (scripts/tokens.py) -->
+<style>
+  .band { background: var(--brand); color: var(--brand-ink); border-radius: var(--radius); padding: 18pt 20pt; margin-bottom: 14pt; }
+  .band .k { font-family: var(--font-label); font-size: 8pt; letter-spacing: .14em; text-transform: uppercase; opacity: .85; }
+  .band h1 { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--display-tracking); font-size: 32pt; line-height: 1.02; margin: 6pt 0 4pt; }
+  .band p { margin: 0; font-size: 10.5pt; opacity: .92; }
+  .swatch-table .chip { display: inline-block; width: 26pt; height: 18pt; border-radius: 4pt; border: 0.6pt solid var(--rule); vertical-align: middle; }
+  .spec { border: 0.9pt solid var(--rule); border-radius: var(--radius); padding: 10pt 12pt; margin-bottom: 8pt; break-inside: avoid; }
+  .spec .sample { font-size: 22pt; line-height: 1.15; margin-bottom: 4pt; }
+  .ui-demo { display: flex; gap: 10pt; align-items: center; margin: 6pt 0; }
+  .ui-demo .btn { padding: 6pt 14pt; border-radius: var(--radius); background: var(--brand); color: var(--brand-ink); font-size: 9.5pt; font-weight: 600; }
+  .ui-demo .btn.alt { background: transparent; color: var(--ink); border: 0.9pt solid var(--ink); }
+</style>
+</head><body>
+
+<div class="band">
+  <div class="k">Brand snapshot · {{Month YYYY}} · {{domain}}</div>
+  <h1>{{Brand}}</h1>
+  <p>{{One line on how the brand looks and sounds.}}</p>
+</div>
+
+<h3><span class="num">01</span>Color <span class="tag verified">From the live site, {{date}}</span></h3>
+<!-- Swatch table from palette.py -->
+{{swatch table}}
+<p class="small muted">{{Notes: gradients, dark mode, sub-brand colors, and any official values that differ from the site.}}</p>
+
+<h3><span class="num">02</span>Type</h3>
+<div class="spec">
+  <div class="sample" style="font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:var(--display-tracking)">{{A real headline from their site}}</div>
+  <div class="small"><b>{{Brand font}}</b>, {{foundry}}, {{free or commercial}} · Headlines, {{weight}}, {{tracking}} · Set here in {{stand-in}}</div>
+</div>
+<div class="spec">
+  <div class="sample" style="font-size:12pt;line-height:1.5">{{A real body sentence from their site.}}</div>
+  <div class="small"><b>{{Body font}}</b> · {{size and line height on the site}} · {{stand-in if any}}</div>
+</div>
+
+<h3><span class="num">03</span>Logo</h3>
+<p>{{The mark and wordmark in words: shape, letter case, typeface style, color versions, how it sits on light and dark.}} Official files: <a href="{{url}}">{{press kit or brand portal}}</a>.</p>
+
+<h3><span class="num">04</span>Interface</h3>
+<div class="ui-demo"><span class="btn">{{Primary button label}}</span><span class="btn alt">{{Secondary}}</span><span class="small muted">Corner radius {{N px}} · {{shadow or flat}} · {{spacing feel}}</span></div>
+<p class="small">{{Layout patterns, grid, iconography, motion.}}</p>
+
+<h3><span class="num">05</span>Voice</h3>
+<div class="cols">
+  <div class="card"><h4>Sounds like</h4><ul><li><b>{{Trait}}:</b> “{{real line}}”</li></ul></div>
+  <div class="card plain"><h4>Avoids</h4><ul><li>{{…}}</li></ul></div>
+</div>
+
+<h3><span class="num">06</span>Imagery</h3>
+<p>{{Photography or illustration style, subjects, color treatment, composition.}}</p>
+
+<h3><span class="num">07</span>Official resources</h3>
+<table class="glance">
+  <tr><th>Guidelines</th><td>{{link, or Not public}}</td></tr>
+  <tr><th>Press kit</th><td>{{link}}</td></tr>
+  <tr><th>Design system</th><td>{{link, or None found}}</td></tr>
+</table>
+<p class="small muted">{{Brand}}'s logos, fonts and imagery belong to {{Brand}}; its guidelines govern how they can be used. Tokens are taken from the live site and should be checked against official guidelines before production use.</p>
+
+<!-- Credit line: keep it unless the person asks to leave it out. -->
+<p class="credit">Made with the free <a href="https://github.com/BeautifulEngine/skills">Brand Snapshot</a> skill for Claude, by <a href="https://www.beautifulengine.com">Beautiful Engine · beautifulengine.com</a></p>
+</body></html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<!-- Activation concepts, 16:9. Fill every {{placeholder}}; repeat the three concept slides per concept. See references/rendering.md. -->
+<html lang="en"><head><meta charset="utf-8">
+<title>{{Brand}} — Activation Concepts</title>
+<!-- FONT LINKS (scripts/fonts.py) -->
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="deck.css">
+<!-- TOKENS (scripts/tokens.py) -->
+<style>
+  .plan svg text { font-family: var(--font-label); font-size: 13px; fill: var(--ink); }
+  .plan .zone { stroke: var(--ink); stroke-width: 1.2; }
+  .plan .wall { fill: none; stroke: var(--ink); stroke-width: 3; }
+  .plan .flow { stroke: var(--accent); stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+</style>
+</head><body>
+
+<section class="slide title-slide">
+  <div class="eyebrow">Activation concepts · {{Month YYYY}}</div>
+  <h1>{{Brand}} at {{venue or event}}</h1>
+  <div class="dek">Three ways to {{objective}} for {{audience}}.</div>
+  <div class="meta">{{Dates}} · {{Footprint}} · Budget {{range}}</div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">The brief</div>
+  <h2>{{The objective in one sentence.}}</h2>
+  <div class="grid g3">
+    <div class="panel"><h3>Audience</h3><p>{{who, how many, why they're there}}</p></div>
+    <div class="panel"><h3>Place</h3><p>{{footprint, indoor or outdoor, hours, rules}}</p></div>
+    <div class="panel"><h3>Success looks like</h3><p>{{KPIs}}</p></div>
+  </div>
+  <p class="small muted" style="margin-top:14pt">Assumptions: {{defaults chosen where the brief was silent}}</p>
+  <div class="foot">{{Brand}} · Activation concepts</div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">The insight</div>
+  <h2>{{What we noticed about the audience or the brand that the concepts build on.}}</h2>
+  <p class="lede">{{evidence for the insight, with source}}</p>
+  <div class="foot">{{Brand}} · Activation concepts</div>
+</section>
+
+<!-- ===== Concept A (repeat these three slides for B and C) ===== -->
+<section class="slide section">
+  <div class="eyebrow">Concept A · {{Safe | Stretch | Bold}}</div>
+  <h2>{{Concept name}}</h2>
+  <div class="lede">{{The idea in one sentence, and the moment people will photograph.}}</div>
+  <div class="foot">{{Brand}} · Activation concepts</div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">Concept A · Guest journey</div>
+  <h2>{{What a guest does, start to finish.}}</h2>
+  <div class="grid g-2-1">
+    <ol class="steps"><li><b>{{Arrive}}</b> {{what they see first}}</li><li><b>{{Enter}}</b> {{…}}</li><li><b>{{Do}}</b> {{…}}</li><li><b>{{Share}}</b> {{…}}</li><li><b>{{Leave with}}</b> {{product, content or sign-up}}</li></ol>
+    <div class="grid">
+      <div class="panel"><h3>Why it fits {{Brand}}</h3><p>{{tie to brand voice, product or campaign}}</p></div>
+      <div class="panel line"><h3>Throughput</h3><p>{{N}} guests/hour <span class="small muted">({{capacity}} at once × {{dwell}} min dwell)</span></p></div>
+    </div>
+  </div>
+  <div class="foot">{{Brand}} · Activation concepts</div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">Concept A · Plan and build</div>
+  <h2>{{Footprint}}: {{what gets built, in a line.}}</h2>
+  <div class="grid g2">
+    <div class="plan">
+      <!-- Draw to scale: 1 ft = 20 px here (a 30 × 20 ft footprint = 600 × 400). Zone fills: var(--brand-soft), var(--accent-soft), var(--muted-soft). Add zones, furniture or screens as rects; keep labels short. -->
+      <svg viewBox="0 0 640 440" role="img" aria-label="{{Concept}} floor plan">
+        <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--accent)"/></marker></defs>
+        <rect class="wall" x="20" y="20" width="600" height="400"/>
+        <rect class="zone" x="40" y="40" width="200" height="140" style="fill:var(--brand-soft)"/><text x="52" y="64">{{Zone 1}}</text>
+        <rect class="zone" x="260" y="40" width="340" height="230" style="fill:var(--accent-soft)"/><text x="272" y="64">{{Zone 2}}</text>
+        <rect class="zone" x="40" y="200" width="200" height="200" style="fill:var(--muted-soft)"/><text x="52" y="224">{{Queue}}</text>
+        <path class="flow" d="M140 418 L140 300 L320 300 L430 150"/>
+        <text x="300" y="412">{{Entry · Exit}}</text>
+      </svg>
+      <div class="small muted" style="margin-top:4pt">Scale: 1 square = {{N}} ft. {{north or street side}}</div>
+    </div>
+    <div>
+      <table class="glance">
+        <tr><th>Structure</th><td>{{…}}</td></tr>
+        <tr><th>Finishes</th><td>{{…}}</td></tr>
+        <tr><th>Tech</th><td>{{…}}</td></tr>
+        <tr><th>Power</th><td>{{≈ N W, circuits or generator}}</td></tr>
+        <tr><th>Staff</th><td>{{roles × counts per shift}}</td></tr>
+        <tr><th>Load-in</th><td>{{days, crew}}</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="foot">{{Brand}} · Activation concepts</div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">Concept A · Budget and risks</div>
+  <h2>{{$X–$Y}} <span class="tag estimate">Estimate</span></h2>
+  <div class="grid g2">
+    <table class="data">
+      <thead><tr><th>Category</th><th>Range</th></tr></thead>
+      <tbody>
+        <tr><td>Design and production management</td><td class="num">{{$}}</td></tr>
+        <tr><td>Fabrication and materials</td><td class="num">{{$}}</td></tr>
+        <tr><td>Tech and AV</td><td class="num">{{$}}</td></tr>
+        <tr><td>Staffing</td><td class="num">{{$}}</td></tr>
+        <tr><td>Logistics, permits, insurance</td><td class="num">{{$}}</td></tr>
+        <tr><td>Contingency (10–15%)</td><td class="num">{{$}}</td></tr>
+      </tbody>
+    </table>
+    <div class="grid">
+      <div class="panel accent"><h3>Risks and fixes</h3><ul><li>{{risk}}: {{mitigation}}</li><li>{{risk}}: {{mitigation}}</li></ul></div>
+      <div class="panel line"><h3>Measured by</h3><ul><li>{{KPI}}: {{how it's captured}}</li></ul></div>
+    </div>
+  </div>
+  <div class="foot">{{Brand}} · Activation concepts</div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">Side by side</div>
+  <h2>{{Our recommendation, in a sentence.}}</h2>
+  <table class="data">
+    <thead><tr><th></th><th>{{A}}</th><th>{{B}}</th><th>{{C}}</th></tr></thead>
+    <tbody>
+      <tr><td><b>Impact</b></td><td>{{…}}</td><td>{{…}}</td><td>{{…}}</td></tr>
+      <tr><td><b>Budget</b></td><td class="num">{{range}}</td><td class="num">{{range}}</td><td class="num">{{range}}</td></tr>
+      <tr><td><b>Build time</b></td><td>{{…}}</td><td>{{…}}</td><td>{{…}}</td></tr>
+      <tr><td><b>Guests per hour</b></td><td class="num">{{N}}</td><td class="num">{{N}}</td><td class="num">{{N}}</td></tr>
+      <tr><td><b>Content potential</b></td><td>{{…}}</td><td>{{…}}</td><td>{{…}}</td></tr>
+      <tr><td><b>Risk</b></td><td>{{…}}</td><td>{{…}}</td><td>{{…}}</td></tr>
+    </tbody>
+  </table>
+  <div class="foot">{{Brand}} · Activation concepts</div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">Timeline and next steps</div>
+  <h2>{{From approval to opening day.}}</h2>
+  <div class="grid g4">
+    <div class="panel line"><div class="kpi"><div class="k">{{Week N}}</div></div><h3>Approve</h3><p class="small">{{…}}</p></div>
+    <div class="panel line"><div class="kpi"><div class="k">{{Week N}}</div></div><h3>Design</h3><p class="small">{{…}}</p></div>
+    <div class="panel line"><div class="kpi"><div class="k">{{Week N}}</div></div><h3>Fabricate</h3><p class="small">{{…}}</p></div>
+    <div class="panel line"><div class="kpi"><div class="k">{{Week N}}</div></div><h3>Install and open</h3><p class="small">{{…}}</p></div>
+  </div>
+  <ol class="steps" style="margin-top:18pt"><li>{{next step}}</li><li>{{next step}}</li></ol>
+  <div class="foot">{{Brand}} · Activation concepts</div>
+</section>
+
+</body></html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<!-- PDF version of a resume or cover letter. Paste the HTML fragment from md_doc.py --html at BODY. Neutral fonts only. -->
+<html lang="en"><head><meta charset="utf-8">
+<title>{{Name}} — {{Resume | Cover letter}}</title>
+<!-- FONT LINKS (scripts/fonts.py) -->
+<link rel="stylesheet" href="base.css">
+<!-- Colors: near-black brand, one quiet accent, no footer text. -->
+<!-- TOKENS (scripts/tokens.py) -->
+<style>
+  @page { margin: 0.6in 0.7in; @bottom-left { content: none; } @bottom-right { content: none; } }
+  body { font-size: 10.2pt; line-height: 1.42; }
+  h1.name { font-family: var(--font-display); font-weight: var(--display-weight); font-size: 22pt; letter-spacing: var(--display-tracking); margin: 0; line-height: 1.1; }
+  p.contact { color: var(--muted); font-size: 9pt; margin: 3pt 0 10pt; }
+  h2 { font-family: var(--font-label); font-size: 8.6pt; letter-spacing: .12em; text-transform: uppercase; color: var(--brand); border-bottom: 0.8pt solid var(--rule); padding-bottom: 2pt; margin: 12pt 0 5pt; break-after: avoid; }
+  h3 { display: flex; justify-content: space-between; font-size: 10.2pt; font-weight: 600; margin: 7pt 0 2pt; break-after: avoid; }
+  h3 .when { font-weight: 400; color: var(--muted); font-size: 9.2pt; }
+  ul { margin: 0 0 4pt; padding-left: 13pt; }
+  li { margin-bottom: 1.5pt; }
+  p { margin: 0 0 7pt; }
+  .letter p { margin-bottom: 10pt; }
+</style>
+</head><body>
+<div class="{{resume | letter}}">
+<!-- BODY: HTML fragment from md_doc.py -->
+{{body}}
+</div>
+</body></html>

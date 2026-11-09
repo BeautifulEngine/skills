@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- Application prep sheet. Fill every {{placeholder}}. See references/rendering.md. -->
+<html lang="en"><head><meta charset="utf-8">
+<title>{{Company}} — Application Prep</title>
+<!-- FONT LINKS (scripts/fonts.py) -->
+<link rel="stylesheet" href="base.css">
+<!-- TOKENS (scripts/tokens.py) -->
+<style>
+  .doc-kicker { font-family: var(--font-label); font-size: 8pt; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  .doc-title { font-family: var(--font-display); font-weight: var(--display-weight); font-size: 26pt; letter-spacing: var(--display-tracking); line-height: 1.08; margin: 4pt 0 6pt; }
+  .strength { font-family: var(--font-label); font-size: 7.5pt; letter-spacing: .06em; text-transform: uppercase; padding: 1.5pt 5pt; border-radius: 3pt; white-space: nowrap; }
+  .strength.strong { background: var(--good-soft); } .strength.partial { background: var(--accent-soft); } .strength.gap { background: var(--bad-soft); }
+  .draft { border-left: 2.5pt solid var(--accent); padding: 2pt 0 2pt 10pt; margin: 6pt 0 12pt; break-inside: avoid; }
+  .draft .to { font-size: 8.3pt; color: var(--muted); margin-bottom: 3pt; }
+</style>
+</head><body>
+
+<div class="doc-kicker">Application prep · {{Month D, YYYY}}</div>
+<h1 class="doc-title">{{Role}} at {{Company}}</h1>
+<p class="lede">{{Fit in one line: strong fit, stretch, or long shot, and why.}}</p>
+
+<div class="stats four">
+  <div class="stat"><div class="v">{{N/N}}</div><div class="k">Must-haves met</div></div>
+  <div class="stat"><div class="v">{{N%}}</div><div class="k">Keyword coverage</div></div>
+  <div class="stat"><div class="v">{{$X–$Y}}</div><div class="k">Posted pay</div><div class="n">{{or Not listed}}</div></div>
+  <div class="stat"><div class="v">{{Date}}</div><div class="k">Apply by</div><div class="n">{{target}}</div></div>
+</div>
+
+<h3><span class="num">01</span>Fit check</h3>
+<table class="data">
+  <thead><tr><th>They need</th><th>Your strongest evidence</th><th></th><th>How to handle it</th></tr></thead>
+  <tbody><tr><td>{{requirement}}</td><td>{{real experience}}</td><td><span class="strength strong">{{Strong | Partial | Gap}}</span></td><td>{{…}}</td></tr></tbody>
+</table>
+
+<h3><span class="num">02</span>Keywords</h3>
+<div class="cols">
+  <div class="card good"><h4>Covered</h4><p class="small">{{terms that honestly appear in the resume}}</p></div>
+  <div class="card bad"><h4>Missing</h4><p class="small">{{terms not covered, and whether each can truthfully be added}}</p></div>
+</div>
+
+<h3><span class="num">03</span>Portfolio: lead with these</h3>
+<ol class="big"><li>{{Project}}<span class="why">{{why it answers their top need, and the one-line framing to use}}</span></li></ol>
+
+<h3><span class="num">04</span>Outreach drafts</h3>
+<div class="draft"><div class="to">To {{recruiter or hiring manager title}} · {{LinkedIn or email}} · send {{when}}</div><p>{{short note, under 90 words}}</p></div>
+
+<h3><span class="num">05</span>Interview stories</h3>
+<table class="glance"><tr><th>{{Requirement}}</th><td><b>{{Situation}}.</b> {{Action.}} {{Result.}}</td></tr></table>
+
+<h3><span class="num">06</span>Questions to ask</h3>
+<ol class="big"><li>{{question}}<span class="why">{{what it tells you}}</span></li></ol>
+
+<h3><span class="num">07</span>Follow-up schedule</h3>
+<div class="timeline">
+  <div class="tl"><div class="when">{{Date}}</div><div>{{Apply, and send the outreach note}}</div></div>
+  <div class="tl"><div class="when">{{Date}}</div><div>{{Nudge if no reply (5–7 business days)}}</div></div>
+</div>
+
+<!-- Credit line: keep it unless the person asks to leave it out. -->
+<p class="credit">Made with the free <a href="https://github.com/BeautifulEngine/skills">Application Kit</a> skill for Claude, by <a href="https://www.beautifulengine.com">Beautiful Engine · beautifulengine.com</a></p>
+</body></html>
