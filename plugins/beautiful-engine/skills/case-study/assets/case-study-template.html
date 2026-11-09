@@ -13,8 +13,7 @@
   .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
   .text { max-width: 680px; }
   header.hero { padding: 72px 0 28px; }
-  .kicker { font-family: var(--font-label); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
-  h1 { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--display-tracking); font-size: clamp(36px, 6vw, 64px); line-height: 1.02; margin: 10px 0 16px; }
+  h1 { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--display-tracking); font-size: clamp(36px, 6vw, 64px); line-height: 1.02; margin: 0 0 16px; }
   .dek { font-size: clamp(19px, 2.4vw, 24px); line-height: 1.4; color: var(--ink); max-width: 760px; margin: 0; }
   .meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px 28px; margin: 32px 0 8px; padding-top: 16px; border-top: 1px solid var(--rule); }
   .meta div { font-size: 15px; }
@@ -48,7 +47,6 @@
 <main class="wrap">
 
 <header class="hero">
-  <div class="kicker">Case study · {{Year}}</div>
   <h1>{{Project title}}</h1>
   <p class="dek">{{The 4-sentence story compressed to one or two: challenge, idea, outcome.}}</p>
   <div class="meta">
@@ -56,6 +54,7 @@
     <div><span>Role</span>{{What the person did}}</div>
     <div><span>Team</span>{{Size or key collaborators}}</div>
     <div><span>Disciplines</span>{{Brand, experiential, interactive…}}</div>
+    <div><span>Year</span>{{Year}}</div>
   </div>
 </header>
 

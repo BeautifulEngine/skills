@@ -29,7 +29,7 @@
   <div class="stat"><div class="v">{{N days}}</div><div class="k">Build time</div><div class="n">{{crew}}</div></div>
 </div>
 
-<h3><span class="num">01</span>Overview</h3>
+<h2 class="sec"><span class="num">01</span>Overview</h2>
 <div class="diagram">
   <!-- Front and side views to scale. Label sub-assemblies; add dimension lines with class "dim". -->
   <svg viewBox="0 0 700 360" role="img" aria-label="{{Project}} front and side views">
@@ -46,11 +46,11 @@
   <tr><th>{{B · Face}}</th><td>{{…}}</td></tr>
 </table>
 
-<h3><span class="num">02</span>Bill of materials</h3>
+<h2 class="sec"><span class="num">02</span>Bill of materials</h2>
 <!-- BOM table from bom_calc.py -->
 {{bom table}}
 
-<h3><span class="num">03</span>Cut list and sheets</h3>
+<h2 class="sec"><span class="num">03</span>Cut list and sheets</h2>
 <table class="data">
   <thead><tr><th>Part</th><th class="num">Qty</th><th class="num">Size (in)</th><th>Material</th><th>Process</th></tr></thead>
   <tbody><tr><td>{{part}}</td><td class="num">{{N}}</td><td class="num">{{W × H}}</td><td>{{material}}</td><td>{{laser | CNC | saw}}</td></tr></tbody>
@@ -58,26 +58,26 @@
 <!-- Sheet goods table from bom_calc.py -->
 {{sheet table}}
 
-<h3><span class="num">04</span>Files and machine settings</h3>
+<h2 class="sec"><span class="num">04</span>Files and machine settings</h2>
 <table class="data">
   <thead><tr><th>Process</th><th>Files</th><th>Material</th><th>Starting settings</th><th class="num">Machine time</th></tr></thead>
   <tbody><tr><td>{{Laser}}</td><td>{{DXF/SVG, layers}}</td><td>{{…}}</td><td>{{…}} <span class="tag estimate">Test on scrap</span></td><td class="num">{{h}}</td></tr></tbody>
 </table>
 
-<h3><span class="num">05</span>Power</h3>
+<h2 class="sec"><span class="num">05</span>Power</h2>
 <!-- Power budget table from bom_calc.py; delete this section if nothing is powered -->
 {{power table}}
 <p class="small">{{Wiring plan: voltage, fusing, wire gauge, connectors, where the controller lives.}}</p>
 
-<h3><span class="num">06</span>Tools</h3>
+<h2 class="sec"><span class="num">06</span>Tools</h2>
 <p>{{tools list, grouped}}</p>
 
-<h3><span class="num">07</span>Build steps</h3>
+<h2 class="sec"><span class="num">07</span>Build steps</h2>
 <ol class="build">
   <li><b>{{Sub-assembly}}:</b> {{step}} <span class="check">Check: {{checkpoint}}</span></li>
 </ol>
 
-<h3><span class="num">08</span>Finish, transport, install and strike</h3>
+<h2 class="sec"><span class="num">08</span>Finish, transport, install and strike</h2>
 <table class="glance">
   <tr><th>Finish</th><td>{{finishes and cure times}}</td></tr>
   <tr><th>Breakdown</th><td>{{how it splits for transport, vehicle it fits}}</td></tr>
@@ -85,17 +85,17 @@
   <tr><th>Strike</th><td>{{…}}</td></tr>
 </table>
 
-<h3><span class="num">09</span>Safety</h3>
+<h2 class="sec"><span class="num">09</span>Safety</h2>
 <div class="callout warn"><div class="title">Before you build</div>
   <ul><li>{{the specific hazards in this build and how to handle them}}</li><li>{{professional review needed, if any}}</li></ul>
 </div>
 
-<h3><span class="num">10</span>Timeline</h3>
+<h2 class="sec"><span class="num">10</span>Timeline</h2>
 <div class="timeline">
   <div class="tl"><div class="when">{{Day or date}}</div><div>{{order long-lead items · cut · print · assemble · test · finish · install}}</div></div>
 </div>
 
-<h3><span class="num">11</span>Vendors</h3>
+<h2 class="sec"><span class="num">11</span>Vendors</h2>
 <ol class="sources"><li><a href="{{url}}">{{vendor and item}}</a> <span class="d">· {{price checked on date}}</span></li></ol>
 
 <!-- Credit line: keep it unless the person asks to leave it out. -->

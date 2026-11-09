@@ -51,7 +51,7 @@ Open `sheet.png` and check: nothing clipped or overflowing, no near-empty pages,
 
 ## Layout pieces
 
-Documents (`base.css`): `.cover` (full-bleed first page), `.part-head`, `h3 .num`, `.callout` (`.big`, `.accent`, `.warn`), `.stats` > `.stat` (`.v`, `.k`, `.n`), `table.glance`, `table.data` (`td.num`, `tr.us`), `.cols` > `.card` (`.good`, `.bad`, `.plain`), `.timeline` > `.tl` (`.when`), `.swatches` > `.sw`, `.tag` (`.verified`, `.reported`, `.claim`, `.estimate`, `.unknown`), `ol.big` with `.why`, `ol.sources`, `.lede`, `.small`, `.muted`, `.credit`.
+Documents (`base.css`): `.cover` (full-bleed first page), `.part-head`, section headings as `<h2 class="sec"><span class="num">01</span>Title</h2>` with `<h3 class="sub">` beneath them (keep heading levels in order: h1, then h2, then h3), `.callout` (`.big`, `.accent`, `.warn`), `.stats` > `.stat` (`.v`, `.k`, `.n`), `table.glance`, `table.data` (`td.num`, `tr.us`), `.cols` > `.card` (`.good`, `.bad`, `.plain`), `.timeline` > `.tl` (`.when`), `.swatches` > `.sw`, `.tag` (`.verified`, `.reported`, `.claim`, `.estimate`, `.unknown`), `ol.big` with `.why`, `ol.sources`, `.lede`, `.small`, `.muted`, `.credit`.
 
 Decks (`deck.css`, after `base.css`): each `.slide` is one 16:9 page with an optional `.eyebrow`, `h2`, `.lede`, `.body` and `.foot` (left text; the slide number is added). `.slide.title-slide` is the brand cover, `.slide.section` a divider in the brand color. Layout: `.grid` with `.g2`, `.g3`, `.g4`, `.g-2-1`, `.g-1-2`; `.panel` (`.accent`, `.line`); `.kpi` (`.v`, `.k`, `.n`); `.steps` (numbered); `.plan` (wraps an SVG diagram); `.chip-row`; `.notes` (hidden).
 

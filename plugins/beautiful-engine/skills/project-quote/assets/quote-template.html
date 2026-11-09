@@ -37,38 +37,38 @@
   <div class="total-box"><div class="k">Total</div><div class="v">{{total from quote_calc.py}}</div><div class="small">{{payment schedule in one line}}</div></div>
 </div>
 
-<h3><span class="num">01</span>What we'll make</h3>
+<h2 class="sec"><span class="num">01</span>What we'll make</h2>
 <p>{{Two or three sentences: the goal, what the client gets, and when.}}</p>
 <table class="glance">
   <tr><th>{{Deliverable}}</th><td>{{what it includes, formats, quantities}}</td></tr>
 </table>
 
-<h3><span class="num">02</span>Summary</h3>
+<h2 class="sec"><span class="num">02</span>Summary</h2>
 <!-- SUMMARY block from quote_calc.py -->
 {{summary table}}
 
-<h3><span class="num">03</span>Scope and estimate by phase</h3>
+<h2 class="sec"><span class="num">03</span>Scope and estimate by phase</h2>
 <!-- For each phase: a sentence on what happens and what the client reviews, then that phase's table from the ESTIMATE block. -->
 <p><b>{{Phase}}.</b> {{what happens, what the client reviews, and when}}</p>
 {{phase tables}}
 
-<h3><span class="num">04</span>Timeline</h3>
+<h2 class="sec"><span class="num">04</span>Timeline</h2>
 <div class="timeline">
   <div class="tl"><div class="when">{{Week 1–2}}</div><div>{{phase and review point}}</div></div>
 </div>
 
-<h3><span class="num">05</span>Assumptions</h3>
+<h2 class="sec"><span class="num">05</span>Assumptions</h2>
 <ul><li>{{e.g. Client provides feedback within 3 business days of each review}}</li><li>{{Two rounds of revisions per deliverable}}</li></ul>
 
-<h3><span class="num">06</span>Not included</h3>
+<h2 class="sec"><span class="num">06</span>Not included</h2>
 <ul><li>{{e.g. Printing, stock imagery and font licenses, billed at cost if needed}}</li></ul>
 
-<h3><span class="num">07</span>Payment</h3>
+<h2 class="sec"><span class="num">07</span>Payment</h2>
 <!-- PAYMENTS block from quote_calc.py -->
 {{payment table}}
 <p class="small">{{Invoices due net 15. Pass-through costs billed as incurred.}}</p>
 
-<h3><span class="num">08</span>Terms</h3>
+<h2 class="sec"><span class="num">08</span>Terms</h2>
 <div class="small">
   <p><b>Changes.</b> {{Work outside this scope is quoted separately and approved in writing before it starts.}}</p>
   <p><b>Ownership.</b> {{Final approved deliverables transfer to the client on full payment. The studio may show the work in its portfolio unless agreed otherwise.}}</p>
