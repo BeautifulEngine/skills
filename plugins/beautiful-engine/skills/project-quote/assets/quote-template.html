@@ -17,8 +17,9 @@
   table.summary { margin-top: 6pt; }
   .doc-kicker { font-family: var(--font-label); font-size: 8pt; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 4pt; }
   .sign { display: grid; grid-template-columns: 1fr 1fr; gap: 28pt; margin-top: 20pt; break-inside: avoid; }
-  .sign div { border-top: 0.9pt solid var(--ink); padding-top: 5pt; font-size: 8.5pt; color: var(--muted); }
-  .sign .line { height: 34pt; }
+  .sign > div { font-size: 8.5pt; color: var(--muted); }
+  .sign-off { break-inside: avoid; }
+  .sign .line { height: 34pt; border-bottom: 0.9pt solid var(--ink); margin-bottom: 5pt; }
 </style>
 </head><body>
 
@@ -68,6 +69,7 @@
 {{payment table}}
 <p class="small">{{Invoices due net 15. Pass-through costs billed as incurred.}}</p>
 
+<div class="sign-off">
 <h2 class="sec"><span class="num">08</span>Terms</h2>
 <div class="small">
   <p><b>Changes.</b> {{Work outside this scope is quoted separately and approved in writing before it starts.}}</p>
@@ -79,6 +81,7 @@
 <div class="sign">
   <div><div class="line"></div>{{Client name, title}} · Date</div>
   <div><div class="line"></div>{{Studio contact name}}, {{Studio}} · Date</div>
+</div>
 </div>
 
 </body></html>

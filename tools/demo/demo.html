@@ -1,0 +1,80 @@
+<!doctype html>
+<!-- Frame template for the how-to-ask GIFs. Rendered by make_gif.py; fonts come from node_modules (run fonts.py here once). -->
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="node_modules/@fontsource/inter/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/inter/500.css">
+<link rel="stylesheet" href="node_modules/@fontsource/inter/600.css">
+<link rel="stylesheet" href="node_modules/@fontsource/inter/700.css">
+<link rel="stylesheet" href="node_modules/@fontsource/jetbrains-mono/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/jetbrains-mono/500.css">
+<style>
+  :root { --bg:#16181d; --panel:#1f2128; --panel-2:#262932; --line:#353944; --ink:#f4f5f7; --muted:#9aa0ab; --dim:#6b717c; --accent:#5ee38f; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { width:880px; height:380px; background:var(--bg); color:var(--ink); font-family:Inter, sans-serif; -webkit-font-smoothing:antialiased; overflow:hidden; }
+  .stage { padding:36px 44px; height:100%; display:flex; flex-direction:column; }
+  .top { display:flex; justify-content:space-between; align-items:center; }
+  .eyebrow { font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+  .dots { display:flex; gap:7px; }
+  .dots i { width:7px; height:7px; border-radius:50%; background:var(--line); display:block; }
+  .dots i.on { background:var(--ink); }
+  .where { margin-top:26px; display:flex; align-items:baseline; gap:12px; }
+  .where b { font-size:24px; font-weight:700; letter-spacing:-.02em; }
+  .where span { font-size:15px; color:var(--muted); }
+
+  .composer { margin-top:18px; border-radius:18px; background:var(--panel); border:1px solid var(--line); padding:20px 22px 16px; min-height:150px; display:flex; flex-direction:column; justify-content:space-between; }
+  .text { font-size:21px; line-height:1.4; letter-spacing:-.005em; min-height:30px; }
+  .text .ph { color:var(--dim); }
+  .caret { display:inline-block; width:2px; height:1.15em; background:var(--ink); vertical-align:-0.2em; margin-left:1px; }
+  .caret.off { background:transparent; }
+  .bar { display:flex; justify-content:space-between; align-items:center; margin-top:14px; }
+  .attach { width:30px; height:30px; border-radius:9px; border:1px solid var(--line); color:var(--muted); display:grid; place-items:center; font-size:18px; line-height:1; }
+  .send { width:34px; height:34px; border-radius:10px; background:var(--panel-2); color:var(--dim); display:grid; place-items:center; font-size:17px; font-weight:700; }
+  .send.ready { background:var(--ink); color:var(--bg); }
+  .send.pressed { background:var(--accent); color:var(--bg); transform:scale(.92); }
+
+  /* Claude Code look */
+  .composer.term { background:#0f1014; font-family:"JetBrains Mono", monospace; border-radius:12px; }
+  .composer.term .text { font-family:"JetBrains Mono", monospace; font-size:19px; }
+  .composer.term .prompt { color:var(--accent); margin-right:12px; }
+  .composer.term .caret { width:10px; height:1.1em; opacity:.85; }
+  .composer.term .bar { justify-content:flex-start; color:var(--dim); font-size:12px; }
+
+  .result { margin-top:20px; display:flex; align-items:center; gap:12px; opacity:0; }
+  .result.show { opacity:1; }
+  .result.half { opacity:.45; }
+  .chip { font-size:13px; font-weight:600; letter-spacing:.04em; color:var(--accent); border:1px solid #2f6b47; background:#173323; border-radius:999px; padding:5px 10px; white-space:nowrap; }
+  .gets { font-size:17px; color:var(--ink); }
+  .gets em { font-style:normal; color:var(--muted); }
+</style></head>
+<body><div class="stage">
+  <div class="top"><div class="eyebrow" id="eyebrow">How to ask</div><div class="dots" id="dots"></div></div>
+  <div class="where"><b id="where"></b><span id="hint"></span></div>
+  <div class="composer" id="composer">
+    <div class="text" id="text"></div>
+    <div class="bar" id="bar"></div>
+  </div>
+  <div class="result" id="result"><span class="chip" id="chip">✓ skill</span><span class="gets" id="gets"></span></div>
+</div>
+<script>
+  const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+  // s = {n, i, app, typed, caret, send: 'idle'|'ready'|'pressed', result: 0|0.5|1, where, hint, gets}
+  window.render = (s) => {
+    document.getElementById('dots').innerHTML = Array.from({ length: s.n }, (_, k) => `<i class="${k === s.i ? 'on' : ''}"></i>`).join('');
+    document.getElementById('eyebrow').textContent = s.title + ' · How to ask';
+    document.getElementById('chip').textContent = '✓ ' + s.skill + ' skill';
+    document.getElementById('where').textContent = s.where;
+    document.getElementById('hint').textContent = s.hint;
+    const c = document.getElementById('composer');
+    c.className = 'composer' + (s.app ? '' : ' term');
+    const caret = `<span class="caret ${s.caret ? '' : 'off'}"></span>`;
+    const body = s.typed ? esc(s.typed) + caret : (s.app ? caret + '<span class="ph">Ask Claude anything…</span>' : caret);
+    document.getElementById('text').innerHTML = s.app ? body : `<span class="prompt">&gt;</span>${body}`;
+    document.getElementById('bar').innerHTML = s.app
+      ? `<div class="attach">+</div><div class="send ${s.send === 'idle' ? '' : s.send}">↑</div>`
+      : `<span>${s.send === 'pressed' ? 'running…' : 'enter to send'}</span>`;
+    const r = document.getElementById('result');
+    r.className = 'result' + (s.result === 1 ? ' show' : s.result ? ' half' : '');
+    document.getElementById('gets').innerHTML = s.gets;
+  };
+</script>
+</body></html>

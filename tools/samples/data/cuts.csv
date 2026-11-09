@@ -1,0 +1,6 @@
+part,qty,width_in,height_in,material,sheet_in
+Side panel,2,8,96,1/2 ply,
+Back panel,2,24,96,1/2 ply,
+Letter face,8,16,20,1/4 white acrylic,24x18
+Letter return,8,16,20,1/8 black acrylic,24x18
+Top cap,1,24,8,1/2 ply,

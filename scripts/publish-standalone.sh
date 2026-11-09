@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Copy a built skill into its own repo checkout (BeautifulEngine/<skill>): the skill folder,
-# its zip, a landing README, LICENSE and .gitignore. Run scripts/build.sh first.
+# its zip, a landing README, LICENSE, .gitignore, and its demo GIF, preview and sample PDF
+# (docs/<skill>/ and examples/<skill>/ in this repo). Run scripts/build.sh first.
 # Usage: scripts/publish-standalone.sh <skill> <path to that repo's checkout>
 # Example: scripts/publish-standalone.sh build-spec ../build-spec
 set -euo pipefail
@@ -17,5 +18,8 @@ find "$dest/$name" -name '__pycache__' -prune -exec rm -rf {} +
 cp "$ROOT/dist/$name.zip" "$dest/$name.zip"
 cp "$ROOT/LICENSE" "$dest/LICENSE"
 printf '__pycache__/\n*.pyc\nnode_modules/\n.DS_Store\n' > "$dest/.gitignore"
+for kind in docs examples; do
+  if [ -d "$ROOT/$kind/$name" ]; then rm -rf "$dest/$kind"; mkdir -p "$dest/$kind"; cp "$ROOT/$kind/$name"/* "$dest/$kind/"; fi
+done
 python3 "$ROOT/scripts/make_repo_readme.py" "$src" > "$dest/README.md"
 echo "published $name to $dest"

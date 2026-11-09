@@ -1,0 +1,13 @@
+category,part,qty,unit,unit_cost,source,notes,watts
+Structure,1/2 in birch plywood 4x8,3,sheet,68.50,https://www.homedepot.com,cabinet grade,
+Structure,2x2 poplar 8 ft,6,piece,9.80,https://www.homedepot.com,inner frame,
+Face,1/4 in white acrylic 24x18,7,sheet,34.00,local plastics supplier,letter diffusers,
+Face,1/8 in black acrylic 24x18,7,sheet,22.00,local plastics supplier,letter returns,
+Hardware,#8 x 1-1/4 in wood screws (100),1,box,9.99,,,
+Hardware,Ratchet straps and sandbags,4,set,18.00,,wind ballast,
+Electrical,WS2815 LED strip 5 m 12 V,4,reel,38.00,,per-pixel color,72
+Electrical,Pixel controller (Wi-Fi),1,each,60.00,,,6
+Electrical,12 V 30 A power supply (weatherproof),1,each,45.00,,,
+Electrical,Inline fuse holder + 30 A fuses,2,each,7.50,,one per supply output,
+Electrical,14 AWG two-conductor wire 50 ft,1,spool,32.00,,,
+Finish,Exterior primer and black satin paint,1,kit,58.00,,two coats,

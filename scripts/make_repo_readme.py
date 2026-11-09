@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """Write the landing README for a skill's own GitHub repo (BeautifulEngine/<skill>) from its SKILL.md."""
+import json
 import re
 import sys
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+SAMPLES = json.loads((ROOT / "tools" / "samples" / "samples.json").read_text())
 
 PAIRS = {
     "application-kit": ["company-brief", "case-study"],
@@ -51,6 +55,17 @@ if name == "print-listing-kit":
     how = ("Listings are written from the search terms and comparable models Claude finds on each marketplace, then checked by "
            "`listing_check.py` against title and tag limits and your list of trademark terms before you paste them.")
 
+sample = SAMPLES.get(name)
+visuals = ""
+if sample:
+    pages = ", ".join(c[0].lower() + c[1:] for c in sample["preview"]["captions"])
+    who = ("a snapshot of beautifulengine.com" if name == "brand-snapshot"
+           else "fictional names and figures")
+    visuals = (f"![Pages from a sample {title}: {pages}](docs/preview.png)\n\n"
+               f"**See the full sample:** [{sample['pdf']}](examples/{sample['pdf']}) ({who})\n")
+gif = (f"![Animated demo: example requests typed into Claude, each followed by what the {title} skill makes](docs/how-to-ask.gif)\n\n"
+       if (ROOT / "docs" / name / "how-to-ask.gif").exists() else "")
+
 pairs = "\n".join(f"- [{label(p)}](https://github.com/BeautifulEngine/{p})" for p in PAIRS.get(name, []))
 
 print(f"""# {title}
@@ -59,6 +74,7 @@ print(f"""# {title}
 
 **What you get:** {what}
 
+{visuals}
 Made by Beautiful Engine · [beautifulengine.com](https://www.beautifulengine.com) · [Questions or ideas? Open an issue](https://github.com/BeautifulEngine/{name}/issues/new)
 
 ## Install
@@ -92,7 +108,7 @@ Then use `/{name}`.
 
 ## Usage
 
-{usage}
+{gif}{usage}
 
 ## When Claude uses it
 

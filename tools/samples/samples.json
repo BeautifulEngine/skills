@@ -1,0 +1,356 @@
+{
+  "sponsorship-pitch": {
+    "template": "pitch-template.html",
+    "title": "Lumen Sparkling × Paloma Park Sessions — Sample",
+    "pdf": "Sample-Lumen-x-Paloma-Park-Sessions-Partnership-Pitch.pdf",
+    "fonts": [
+      "Space Grotesk:400,500,600,700",
+      "Inter:400,500,600",
+      "DM Mono:400,500"
+    ],
+    "tokens": [
+      "--brand",
+      "#2a1740",
+      "--accent",
+      "#ff6b4a",
+      "--font-display",
+      "Space Grotesk",
+      "--font-body",
+      "Inter",
+      "--font-label",
+      "DM Mono",
+      "--display-weight",
+      "700",
+      "--tracking",
+      "-0.03em",
+      "--radius",
+      "12px",
+      "--cover-stops",
+      "#2a1740,#5b2160,#c2416b",
+      "--cover-ink",
+      "#ffffff",
+      "--brand-soft",
+      "#f4eef8"
+    ],
+    "preview": {
+      "pages": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "captions": [
+        "Title",
+        "The opportunity",
+        "An activation idea",
+        "Partnership tiers"
+      ],
+      "landscape": true
+    }
+  },
+  "activation-concepts": {
+    "template": "concepts-template.html",
+    "title": "Northfield Outdoor Co. — Activation Concepts — Sample",
+    "pdf": "Sample-Northfield-Activation-Concepts.pdf",
+    "fonts": [
+      "Fraunces:400,600,700",
+      "Inter:400,500,600",
+      "DM Mono:400,500"
+    ],
+    "tokens": [
+      "--brand",
+      "#1f3d2b",
+      "--accent",
+      "#c8611d",
+      "--font-display",
+      "Fraunces",
+      "--font-body",
+      "Inter",
+      "--font-label",
+      "DM Mono",
+      "--display-weight",
+      "600",
+      "--tracking",
+      "-0.01em",
+      "--radius",
+      "10px",
+      "--cover-stops",
+      "#1f3d2b,#2f5a3f,#7a6a3a",
+      "--cover-ink",
+      "#ffffff"
+    ],
+    "preview": {
+      "pages": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "captions": [
+        "Title",
+        "Guest journey",
+        "Floor plan and build",
+        "Budget and risks"
+      ],
+      "landscape": true
+    }
+  },
+  "project-quote": {
+    "template": "quote-template.html",
+    "title": "Field & Form Studio — Quote — Sample",
+    "pdf": "Sample-Field-and-Form-Quote-Ridge-Coffee.pdf",
+    "fonts": [
+      "Inter Tight:400,500,600,700",
+      "Inter:400,500,600",
+      "DM Mono:400,500"
+    ],
+    "tokens": [
+      "--brand",
+      "#1d2433",
+      "--accent",
+      "#c2410c",
+      "--font-display",
+      "Inter Tight",
+      "--font-body",
+      "Inter",
+      "--font-label",
+      "DM Mono",
+      "--display-weight",
+      "600",
+      "--tracking",
+      "-0.02em",
+      "--radius",
+      "8px",
+      "--footer",
+      "Field & Form Studio · Quote Q-20261109-01"
+    ],
+    "preview": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "captions": [
+        "Summary and total",
+        "Scope, timeline and payment",
+        "Terms and sign-off"
+      ]
+    }
+  },
+  "build-spec": {
+    "template": "spec-template.html",
+    "title": "Night Market Sign — Build Spec — Sample",
+    "pdf": "Sample-Night-Market-Sign-Build-Spec.pdf",
+    "fonts": [
+      "Inter Tight:400,500,600,700",
+      "Inter:400,500,600",
+      "JetBrains Mono:400,500"
+    ],
+    "tokens": [
+      "--brand",
+      "#111827",
+      "--accent",
+      "#b45309",
+      "--font-display",
+      "Inter Tight",
+      "--font-body",
+      "Inter",
+      "--font-label",
+      "JetBrains Mono",
+      "--display-weight",
+      "700",
+      "--tracking",
+      "-0.02em",
+      "--radius",
+      "6px",
+      "--footer",
+      "Night Market Sign · Build Spec"
+    ],
+    "preview": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "captions": [
+        "Overview and parts",
+        "Cut list and sheets",
+        "Settings, power and build steps"
+      ]
+    }
+  },
+  "application-kit": {
+    "template": "kit-template.html",
+    "title": "Northwind Studios — Application Prep — Sample",
+    "pdf": "Sample-Northwind-Application-Prep.pdf",
+    "fonts": [
+      "Inter Tight:400,500,600,700",
+      "Inter:400,500,600",
+      "DM Mono:400,500"
+    ],
+    "tokens": [
+      "--brand",
+      "#1e293b",
+      "--accent",
+      "#2563eb",
+      "--font-display",
+      "Inter Tight",
+      "--font-body",
+      "Inter",
+      "--font-label",
+      "DM Mono",
+      "--display-weight",
+      "600",
+      "--tracking",
+      "-0.02em",
+      "--footer",
+      "Application prep · Senior Brand Designer, Northwind Studios"
+    ],
+    "preview": {
+      "pages": [
+        1,
+        2
+      ],
+      "captions": [
+        "Fit check and keywords",
+        "Outreach, stories and follow-ups"
+      ]
+    }
+  },
+  "case-study": {
+    "template": "case-study-template.html",
+    "title": "Paloma Park Sessions — Case Study — Sample",
+    "pdf": "Sample-Paloma-Park-Sessions-Case-Study.pdf",
+    "fonts": [
+      "Inter Tight:400,500,600,700",
+      "Inter:400,500,600",
+      "DM Mono:400,500"
+    ],
+    "tokens": [
+      "--brand",
+      "#2a1740",
+      "--accent",
+      "#c2416b",
+      "--font-display",
+      "Inter Tight",
+      "--font-body",
+      "Inter",
+      "--font-label",
+      "DM Mono",
+      "--display-weight",
+      "700",
+      "--tracking",
+      "-0.03em",
+      "--radius",
+      "10px"
+    ],
+    "images": [
+      "images"
+    ],
+    "preview": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "captions": [
+        "Story and hero image",
+        "Insight, idea and process",
+        "Results and credits"
+      ]
+    }
+  },
+  "brand-snapshot": {
+    "template": "snapshot-template.html",
+    "title": "Beautiful Engine — Brand Snapshot",
+    "pdf": "Beautiful-Engine-Brand-Snapshot-2026-11.pdf",
+    "fonts": [
+      "Oswald:500,600,700",
+      "Lexend:400,500,600",
+      "DM Mono:400,500",
+      "Caveat:500"
+    ],
+    "tokens": [
+      "--brand",
+      "#1d2238",
+      "--accent",
+      "#e86d52",
+      "--ink",
+      "#1d2238",
+      "--paper",
+      "#f3ebdd",
+      "--font-display",
+      "Oswald",
+      "--font-body",
+      "Lexend",
+      "--font-label",
+      "DM Mono",
+      "--display-weight",
+      "600",
+      "--tracking",
+      "0.005em",
+      "--radius",
+      "12px",
+      "--brand-soft",
+      "#ede2cf",
+      "--accent-soft",
+      "#f7e1d8",
+      "--footer",
+      "Beautiful Engine · Brand Snapshot · Nov 2026"
+    ],
+    "extra_css": ":root { --btn-radius: 999px; } .ui-demo .btn { background: #e86d52; color: #1d2238; box-shadow: 0 3pt 10pt rgba(232,109,82,.22); } .ui-demo .btn.alt { border: 1.1pt solid rgba(29,34,56,.25); box-shadow: none; } .band { background: #1d2238; color: #f3ebdd; } .band h1 { text-transform: uppercase; letter-spacing: .02em; } .tag.verified { background: #e3ead9; }",
+    "preview": {
+      "pages": [
+        1,
+        2
+      ],
+      "captions": [
+        "Color and type",
+        "Logo, interface, voice and resources"
+      ]
+    }
+  },
+  "print-listing-kit": {
+    "template": "../../brand-snapshot/assets/snapshot-template.html",
+    "title": "Hex Stack Planter — Listing Kit — Sample",
+    "pdf": "Sample-Hex-Stack-Planter-Listing-Kit.pdf",
+    "fonts": [
+      "Inter Tight:400,500,600,700",
+      "Inter:400,500,600",
+      "JetBrains Mono:400,500"
+    ],
+    "tokens": [
+      "--brand",
+      "#14532d",
+      "--accent",
+      "#0f766e",
+      "--font-display",
+      "Inter Tight",
+      "--font-body",
+      "Inter",
+      "--font-label",
+      "JetBrains Mono",
+      "--display-weight",
+      "700",
+      "--tracking",
+      "-0.02em",
+      "--radius",
+      "8px",
+      "--footer",
+      "Hex Stack Planter · Listing kit"
+    ],
+    "preview": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "captions": [
+        "At a glance and Etsy listing",
+        "Printables, settings and pricing",
+        "Photo list and files"
+      ]
+    },
+    "extra_css": ".tags { display:flex; flex-wrap:wrap; gap:4pt; margin:4pt 0 8pt; } .tags span { font-family:var(--font-label); font-size:7.8pt; background:var(--brand-soft); color:var(--brand); padding:2pt 6pt; border-radius:3pt; } .listing { border-left:2.5pt solid var(--brand); padding:2pt 0 2pt 12pt; margin:4pt 0 12pt; } .listing .title { font-family:var(--font-display); font-weight:600; font-size:12.5pt; line-height:1.3; margin:2pt 0 2pt; } .count { font-family:var(--font-label); font-size:7.8pt; color:var(--good); } .hero-row { display:grid; grid-template-columns: 1fr 150pt; gap:16pt; align-items:center; } pre.readme { font-family:var(--font-label); font-size:8pt; background:var(--muted-soft); border-radius:var(--radius); padding:10pt 12pt; white-space:pre-wrap; margin:0; } ul.check { list-style:none; padding-left:0; } ul.check li::before { content:'☐ '; color:var(--muted); }"
+  }
+}

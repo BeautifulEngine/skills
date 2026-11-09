@@ -1,0 +1,115 @@
+<div class="doc-kicker">Build spec · November 2026 · Sample, fictional project</div>
+<h1 class="doc-title">Night Market sign</h1>
+<p class="lede">An 8 ft freestanding sign that spells OPEN LATE in color-changing letters, for an outdoor night market, running all night on one battery.</p>
+
+<div class="stats four">
+  <div class="stat"><div class="v">2 × 8 × 0.7 ft</div><div class="k">Overall size</div></div>
+  <div class="stat"><div class="v">$1,205</div><div class="k">Materials</div><div class="n">estimate incl. tax, Nov 2026</div></div>
+  <div class="stat"><div class="v">294 W</div><div class="k">Power</div><div class="n">10.4 h on a 3.6 kWh battery</div></div>
+  <div class="stat"><div class="v">4 days</div><div class="k">Build time</div><div class="n">2 people</div></div>
+</div>
+
+<h2 class="sec"><span class="num">01</span>Overview</h2>
+<div class="diagram">
+  <svg viewBox="0 0 700 360" role="img" aria-label="Night Market sign front and side views">
+    <defs><marker id="tick" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M5,0 L5,10" stroke="#666" stroke-width="2"/></marker></defs>
+    <rect class="part" x="150" y="20" width="80" height="300"/><text x="240" y="40">A · Tower (plywood box)</text>
+    <rect x="162" y="40" width="56" height="60" fill="#fde68a" stroke="#111827"/><text x="181" y="78">O</text>
+    <rect x="162" y="105" width="56" height="60" fill="#fca5a5" stroke="#111827"/><text x="182" y="143">P</text>
+    <rect x="162" y="170" width="56" height="60" fill="#a7f3d0" stroke="#111827"/><text x="182" y="208">E</text>
+    <rect x="162" y="235" width="56" height="60" fill="#bfdbfe" stroke="#111827"/><text x="182" y="273">N</text>
+    <text x="240" y="150">B · Letter boxes (acrylic, laser cut)</text>
+    <line class="dim" x1="150" y1="340" x2="230" y2="340"/><text x="166" y="356">24 in</text>
+    <rect class="part" x="480" y="20" width="28" height="300"/><text x="520" y="40">Side</text>
+    <line class="dim" x1="470" y1="20" x2="470" y2="320"/><text x="425" y="175">96 in</text>
+    <rect x="460" y="310" width="70" height="12" fill="#9ca3af" stroke="#111827"/><text x="540" y="320">C · Ballast base</text>
+  </svg>
+</div>
+<table class="glance">
+  <tr><th>A · Tower</th><td>1/2 in birch plywood box on a 2×2 frame, track-saw cut, glued and screwed</td></tr>
+  <tr><th>B · Letters</th><td>Eight laser-cut acrylic boxes (white face, black returns) with LED strip inside</td></tr>
+  <tr><th>C · Base</th><td>Plywood plinth with four sandbags and ratchet straps to a stake or fence</td></tr>
+</table>
+
+<h2 class="sec"><span class="num">02</span>Bill of materials</h2>
+<table class="data">
+<thead><tr><th>Part</th><th class="num">Qty</th><th>Unit</th><th class="num">Each</th><th class="num">Total</th><th>Source</th><th>Notes</th></tr></thead><tbody>
+<tr class="us"><td colspan="7"><b>Structure</b></td></tr>
+<tr><td>1/2 in birch plywood 4x8</td><td class="num">3</td><td>sheet</td><td class="num">$68.50</td><td class="num">$205.50</td><td><a href="https://www.homedepot.com">link</a></td><td>cabinet grade</td></tr>
+<tr><td>2x2 poplar 8 ft</td><td class="num">6</td><td>piece</td><td class="num">$9.80</td><td class="num">$58.80</td><td><a href="https://www.homedepot.com">link</a></td><td>inner frame</td></tr>
+<tr class="us"><td colspan="7"><b>Face</b></td></tr>
+<tr><td>1/4 in white acrylic 24x18</td><td class="num">7</td><td>sheet</td><td class="num">$34.00</td><td class="num">$238.00</td><td>local plastics supplier</td><td>letter diffusers</td></tr>
+<tr><td>1/8 in black acrylic 24x18</td><td class="num">7</td><td>sheet</td><td class="num">$22.00</td><td class="num">$154.00</td><td>local plastics supplier</td><td>letter returns</td></tr>
+<tr class="us"><td colspan="7"><b>Hardware</b></td></tr>
+<tr><td>#8 x 1-1/4 in wood screws (100)</td><td class="num">1</td><td>box</td><td class="num">$9.99</td><td class="num">$9.99</td><td></td><td></td></tr>
+<tr><td>Ratchet straps and sandbags</td><td class="num">4</td><td>set</td><td class="num">$18.00</td><td class="num">$72.00</td><td></td><td>wind ballast</td></tr>
+<tr class="us"><td colspan="7"><b>Electrical</b></td></tr>
+<tr><td>WS2815 LED strip 5 m 12 V</td><td class="num">4</td><td>reel</td><td class="num">$38.00</td><td class="num">$152.00</td><td></td><td>per-pixel color</td></tr>
+<tr><td>Pixel controller (Wi-Fi)</td><td class="num">1</td><td>each</td><td class="num">$60.00</td><td class="num">$60.00</td><td></td><td></td></tr>
+<tr><td>12 V 30 A power supply (weatherproof)</td><td class="num">1</td><td>each</td><td class="num">$45.00</td><td class="num">$45.00</td><td></td><td></td></tr>
+<tr><td>Inline fuse holder + 30 A fuses</td><td class="num">2</td><td>each</td><td class="num">$7.50</td><td class="num">$15.00</td><td></td><td>one per supply output</td></tr>
+<tr><td>14 AWG two-conductor wire 50 ft</td><td class="num">1</td><td>spool</td><td class="num">$32.00</td><td class="num">$32.00</td><td></td><td></td></tr>
+<tr class="us"><td colspan="7"><b>Finish</b></td></tr>
+<tr><td>Exterior primer and black satin paint</td><td class="num">1</td><td>kit</td><td class="num">$58.00</td><td class="num">$58.00</td><td></td><td>two coats</td></tr>
+<tr class="us"><td colspan="4"><b>Materials subtotal</b></td><td class="num"><b>$1,100.29</b></td><td colspan="2"></td></tr>
+<tr class="us"><td colspan="4">Tax (9.5%)</td><td class="num">$104.53</td><td colspan="2"></td></tr>
+<tr class="us"><td colspan="4"><b>Total</b></td><td class="num"><b>$1,204.82</b></td><td colspan="2"></td></tr>
+</tbody></table>
+
+
+<h2 class="sec"><span class="num">03</span>Cut list and sheets</h2>
+<table class="data">
+  <thead><tr><th>Part</th><th class="num">Qty</th><th class="num">Size (in)</th><th>Material</th><th>Process</th></tr></thead>
+  <tbody>
+    <tr><td>Side panel</td><td class="num">2</td><td class="num">8 × 96</td><td>1/2 in ply</td><td>Track saw</td></tr>
+    <tr><td>Back panel</td><td class="num">2</td><td class="num">24 × 96</td><td>1/2 in ply</td><td>Track saw</td></tr>
+    <tr><td>Letter face</td><td class="num">8</td><td class="num">16 × 20</td><td>1/4 in white acrylic</td><td>Laser</td></tr>
+    <tr><td>Letter return</td><td class="num">8</td><td class="num">16 × 20</td><td>1/8 in black acrylic</td><td>Laser</td></tr>
+  </tbody>
+</table>
+<h4>Sheet goods</h4>
+<table class="data"><thead><tr><th>Material</th><th>Sheet size (in)</th><th class="num">Part area (sq ft)</th><th class="num">Sheets (+15% waste)</th></tr></thead><tbody>
+<tr><td>1/2 ply</td><td>48 × 96</td><td class="num">44.0</td><td class="num">2</td></tr>
+<tr><td>1/4 white acrylic</td><td>24 × 18</td><td class="num">17.8</td><td class="num">7</td></tr>
+<tr><td>1/8 black acrylic</td><td>24 × 18</td><td class="num">17.8</td><td class="num">7</td></tr>
+</tbody></table>
+<p class="small muted">Sheet counts come from part area plus a waste allowance; real nesting can need one more sheet. Check the layout in your nesting or laser software.</p>
+
+
+<h2 class="sec"><span class="num">04</span>Files and machine settings</h2>
+<table class="data">
+  <thead><tr><th>Process</th><th>Files</th><th>Material</th><th>Starting settings</th><th class="num">Machine time</th></tr></thead>
+  <tbody>
+    <tr><td>Laser</td><td>letters.svg: red = cut, blue = score</td><td>1/4 in cast acrylic</td><td>Cut 100% power, 8 mm/s, 2 passes <span class="tag estimate">Test on scrap</span></td><td class="num">3.5 h</td></tr>
+    <tr><td>Laser</td><td>returns.svg</td><td>1/8 in cast acrylic</td><td>Cut 90% power, 14 mm/s <span class="tag estimate">Test on scrap</span></td><td class="num">2 h</td></tr>
+  </tbody>
+</table>
+
+<h2 class="sec"><span class="num">05</span>Power</h2>
+<h4>Power budget</h4>
+<table class="data"><thead><tr><th>Device</th><th class="num">Qty</th><th class="num">Watts each</th><th class="num">Watts</th></tr></thead><tbody>
+<tr><td>WS2815 LED strip 5 m 12 V</td><td class="num">4</td><td class="num">72</td><td class="num">288</td></tr>
+<tr><td>Pixel controller (Wi-Fi)</td><td class="num">1</td><td class="num">6</td><td class="num">6</td></tr>
+<tr class="us"><td colspan="3">Total draw</td><td class="num">294 W</td></tr>
+<tr class="us"><td colspan="3">With 25% headroom</td><td class="num"><b>368 W</b> · 30.6 A at 12 V</td></tr>
+<tr class="us"><td colspan="3">Runtime on 3,600 Wh battery (85% usable, at total draw)</td><td class="num">10.4 h</td></tr>
+</tbody></table>
+
+<p class="small">12 V DC throughout. 30 A supply fused at the output, 14 AWG runs under 15 ft, controller in the base behind a removable panel.</p>
+
+<h2 class="sec"><span class="num">06</span>Build steps</h2>
+<ol class="build">
+  <li><b>Tower:</b> cut panels, glue and screw the 2×2 frame. <span class="check">Check: square within 1/16 in before the back goes on.</span></li>
+  <li><b>Letters:</b> laser the faces and returns, bond with acrylic cement. <span class="check">Check: dry-fit every letter in its cutout.</span></li>
+  <li><b>LEDs:</b> lay strip inside each letter box, solder joins, heat-shrink. <span class="check">Check: test every letter before sealing.</span></li>
+  <li><b>Finish:</b> prime and paint the tower, two coats. <span class="check">Check: 24 h cure before install.</span></li>
+</ol>
+
+<h2 class="sec"><span class="num">07</span>Safety</h2>
+<div class="callout warn"><div class="title">Before you build</div>
+  <ul><li>Cut acrylic only: never laser PVC or vinyl. Run the laser with ventilation and stay with it.</li>
+  <li>An 8 ft sign catches wind: ballast with at least 100 lb and strap it to a fixed point; take it down above 25 mph.</li>
+  <li>Fuse the battery output and keep all wiring 12 V DC.</li></ul>
+</div>
+
+<p class="credit">Made with the free <a href="https://github.com/BeautifulEngine/build-spec">Build Spec</a> skill for Claude, by <a href="https://www.beautifulengine.com">Beautiful Engine · beautifulengine.com</a></p>

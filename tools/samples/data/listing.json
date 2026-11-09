@@ -1,0 +1,47 @@
+{
+  "model": "Hex Stack Planter",
+  "watch_terms": [
+    "ikea",
+    "lego",
+    "pokemon",
+    "nintendo"
+  ],
+  "listings": {
+    "etsy": {
+      "title": "Hex Stack Planter STL, Modular Succulent Pot With Drip Tray, Stackable 3D Print File, No Supports, Desk Plant Gift",
+      "tags": [
+        "hex planter stl",
+        "succulent planter",
+        "3d print file",
+        "stackable planter",
+        "modular planter",
+        "desk planter",
+        "stl file",
+        "geometric planter",
+        "no supports stl",
+        "plant lover gift",
+        "honeycomb planter",
+        "small pot stl",
+        "drip tray planter"
+      ],
+      "price": 6.5,
+      "license": "Personal use; sell prints with credit",
+      "description": "A honeycomb planter that stacks and clicks together."
+    },
+    "printables": {
+      "title": "Hex Stack Planter: modular, stackable, no supports",
+      "tags": [
+        "planter",
+        "succulent",
+        "hexagon",
+        "modular",
+        "stackable",
+        "home decor",
+        "no supports"
+      ],
+      "price": 0,
+      "license": "CC BY-NC 4.0",
+      "description": "Free single-cell version of the Hex Stack Planter."
+    }
+  }
+}

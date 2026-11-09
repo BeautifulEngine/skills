@@ -1,0 +1,82 @@
+{
+  "application-kit": {
+    "title": "Application Kit",
+    "examples": [
+      ["app", "Tailor my resume and write a cover letter for this posting: jobs.example.com/design-lead", "A tailored resume and cover letter <em>in Word and PDF</em>"],
+      ["app", "Here's my resume and my Company Brief on Netflix. Build my application kit.", "A fit check, portfolio order and outreach <em>using the brief</em>"],
+      ["app", "Just the cover letter for this role, warm and direct, one page.", "A cover letter <em>in your voice, no clichés</em>"],
+      ["app", "Write an outreach note to the hiring manager for this role.", "A short note to send <em>on LinkedIn or email</em>"],
+      ["code", "/application-kit https://jobs.example.com/brand-designer two pages", "The full kit <em>with a two-page resume</em>"]
+    ]
+  },
+  "case-study": {
+    "title": "Case Study",
+    "examples": [
+      ["app", "Write a case study for my festival launch project. Notes and images attached.", "A web page, PDF and Markdown <em>from your notes</em>"],
+      ["app", "Turn this deck into a portfolio case study, short version.", "A 200-word card <em>for a portfolio grid or LinkedIn</em>"],
+      ["app", "Case study for my art car project, aimed at experiential agency roles.", "The story told <em>for that audience</em>"],
+      ["app", "Rewrite this case study for a design lead application at Figma.", "The same work, <em>re-framed for that company</em>"],
+      ["code", "/case-study \"Night Market sign\" long", "A process-heavy version <em>for design teams</em>"]
+    ]
+  },
+  "sponsorship-pitch": {
+    "title": "Sponsorship Pitch",
+    "examples": [
+      ["app", "Make a sponsorship deck pitching Oatly on our summer concert series.", "A 16:9 partnership deck <em>+ speaker notes</em>"],
+      ["app", "Partnership pitch: Rivian x Outside Lands.", "Why they fit, three ideas, tiers <em>and measurement</em>"],
+      ["app", "I'm a creator with 400K followers. Pitch Liquid Death on a sponsorship.", "A creator partnership deck <em>with real audience numbers</em>"],
+      ["app", "Package our venue's assets into three sponsor tiers for a bank. Rate card attached.", "Tiers priced <em>from your rate card</em>"],
+      ["code", "/sponsorship-pitch Oatly x Coachella short leave-behind", "An 8-slide deck <em>+ a two-page leave-behind</em>"]
+    ]
+  },
+  "activation-concepts": {
+    "title": "Activation Concepts",
+    "examples": [
+      ["app", "Three activation concepts for Patagonia at Outside Lands, budget $150–250K.", "Safe, stretch and bold concepts <em>with budgets</em>"],
+      ["app", "Pop-up ideas for a skincare launch in a 1,200 sq ft SoHo storefront, two weeks.", "Guest journeys and <em>floor plans</em>"],
+      ["app", "We have a 20x20 booth at CES for a robotics startup. Give me concepts.", "Booth concepts <em>with build and power notes</em>"],
+      ["app", "Here's the client brief. Turn it into three activation concepts.", "Concepts that <em>answer the brief point by point</em>"],
+      ["code", "/activation-concepts Liquid Death at SXSW $80K rough", "A quick 6-slide version <em>to react to</em>"]
+    ]
+  },
+  "project-quote": {
+    "title": "Project Quote",
+    "examples": [
+      ["app", "Quote for a brand identity for a coffee roaster: logo, palette, packaging for 3 SKUs, 6 weeks.", "A branded quote and SOW <em>ready to sign</em>"],
+      ["app", "Estimate a 20x20 trade show booth design and fabrication management, budget around $60K.", "Phases, hours and pass-through costs <em>that add up</em>"],
+      ["app", "Make my rate card: Design Director $175/hr, Designer $120/hr, day rate $1,300.", "A one-page rate card <em>in your brand</em>"],
+      ["app", "Same quote, but as fixed fees per phase instead of hours.", "Fixed-fee phases, <em>hours kept behind the scenes</em>"],
+      ["code", "/project-quote Acme: website refresh, 8 pages, 5 weeks", "The quote PDF <em>+ quote.json to revise later</em>"]
+    ]
+  },
+  "build-spec": {
+    "title": "Build Spec",
+    "examples": [
+      ["app", "Build spec for an 8 ft LED sign that says OPEN LATE, outdoor, running off a battery.", "BOM, power budget <em>and battery runtime</em>"],
+      ["app", "Here's a sketch of a DJ booth facade. Make a cut list for 1/2 in plywood.", "Cut list, sheet counts <em>and build steps</em>"],
+      ["app", "Parts list and build plan for a 3D printed lamp, 300 mm tall, on a Bambu H2D.", "Print settings, parts <em>and wiring</em>"],
+      ["app", "Fabrication plan for this booth element from our activation deck.", "A package a fabricator <em>could quote from</em>"],
+      ["code", "/build-spec art car light bar 6 ft quick", "A two-page version: <em>BOM, cuts and steps</em>"]
+    ]
+  },
+  "brand-snapshot": {
+    "title": "Brand Snapshot",
+    "examples": [
+      ["app", "Brand snapshot for linear.app.", "Colors, fonts, logo notes <em>and voice on two pages</em>"],
+      ["app", "What colors and fonts does Patagonia use?", "Hex values with <em>contrast checks</em>"],
+      ["app", "Pull design tokens from stripe.com for a pitch mockup.", "tokens.json and tokens.css <em>ready for design tools</em>"],
+      ["app", "Snapshot of Oatly and Liquid Death, side by side.", "One snapshot <em>for each brand</em>"],
+      ["code", "/brand-snapshot notion.so tokens only", "Just the tokens, <em>no PDF</em>"]
+    ]
+  },
+  "print-listing-kit": {
+    "title": "Print Listing Kit",
+    "examples": [
+      ["app", "Listing kit for my modular hex planter. Selling on Etsy, free on Printables.", "Listings for each marketplace, <em>tags checked</em>"],
+      ["app", "Write the MakerWorld listing for this articulated dragon. Printed on a Bambu H2D in PLA.", "Copy with <em>your real print settings</em>"],
+      ["app", "What should I charge for this STL bundle of 12 cable clips?", "A price backed by <em>comparable models</em>"],
+      ["app", "Rewrite my Etsy listing; it's not getting views.", "A sharper title and tags <em>within Etsy's limits</em>"],
+      ["code", "/print-listing-kit \"Hex Stack Planter\" etsy printables", "The kit, listings.csv <em>and a download README</em>"]
+    ]
+  }
+}

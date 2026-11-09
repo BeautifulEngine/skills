@@ -9,9 +9,10 @@ bom.csv columns (header row required):
   category,part,qty,unit,unit_cost,source,notes,watts
   - watts is per unit and optional; rows with watts go into the power budget.
 cuts.csv columns (optional):
-  part,qty,width_in,height_in,material
+  part,qty,width_in,height_in,material[,sheet_in]
   - estimates how many sheets of each material you need (area x waste), and flags parts
-    that don't fit the sheet or the laser bed.
+    that don't fit the sheet or the laser bed. sheet_in (e.g. 24x18) overrides --sheet for
+    that material, for stock that comes in other sizes such as acrylic.
 
 Prints HTML tables (BOM, power, sheets) to stdout and a JSON summary to stderr.
 Writes bom-totals.csv beside bom.csv with line totals. Everything printed is an estimate.
@@ -106,25 +107,28 @@ def main():
         summary.update({"draw_w": round(total_w), "planned_w": round(planned_w), "amps": round(amps, 1), "circuits_20a": circuits})
 
     if a.cuts:
-        sw, sh = dims(a.sheet)
         bed = dims(a.bed) if a.bed else None
         by_mat = OrderedDict()
         for c in csv.DictReader(open(a.cuts, newline="")):
             q, w, h = num(c.get("qty"), 1), num(c.get("width_in")), num(c.get("height_in"))
             mat = c.get("material") or "sheet"
-            by_mat[mat] = by_mat.get(mat, 0) + q * w * h
-            fits_sheet = (w <= sw and h <= sh) or (w <= sh and h <= sw)
+            size = (c.get("sheet_in") or "").strip() or a.sheet
+            mw, mh = dims(size)
+            key = (mat, size)
+            by_mat[key] = by_mat.get(key, 0) + q * w * h
+            fits_sheet = (w <= mw and h <= mh) or (w <= mh and h <= mw)
             if not fits_sheet:
-                warnings.append(f"'{c.get('part')}' ({w:g}x{h:g} in) is bigger than a {a.sheet} sheet: split it or join panels")
+                warnings.append(f"'{c.get('part')}' ({w:g}x{h:g} in) is bigger than a {size} sheet: split it or join panels")
             if bed and not ((w <= bed[0] and h <= bed[1]) or (w <= bed[1] and h <= bed[0])):
                 warnings.append(f"'{c.get('part')}' ({w:g}x{h:g} in) won't fit the {a.bed} bed: cut it on a CNC or split it")
-        out.append(f'<h4>Sheet goods</h4>\n<table class="data"><thead><tr><th>Material</th><th class="num">Part area (sq ft)</th>'
-                   f'<th class="num">Sheets of {sw:g}×{sh:g} in (+{a.waste:g}% waste)</th></tr></thead><tbody>')
+        out.append(f'<h4>Sheet goods</h4>\n<table class="data"><thead><tr><th>Material</th><th>Sheet size (in)</th><th class="num">Part area (sq ft)</th>'
+                   f'<th class="num">Sheets (+{a.waste:g}% waste)</th></tr></thead><tbody>')
         sheets = {}
-        for mat, area in by_mat.items():
-            n = math.ceil(area * (1 + a.waste / 100) / (sw * sh))
-            sheets[mat] = n
-            out.append(f'<tr><td>{html.escape(mat)}</td><td class="num">{area / 144:,.1f}</td><td class="num">{n}</td></tr>')
+        for (mat, size), area in by_mat.items():
+            mw, mh = dims(size)
+            n = math.ceil(area * (1 + a.waste / 100) / (mw * mh))
+            sheets[f"{mat} ({size})"] = n
+            out.append(f'<tr><td>{html.escape(mat)}</td><td>{mw:g} × {mh:g}</td><td class="num">{area / 144:,.1f}</td><td class="num">{n}</td></tr>')
         out.append("</tbody></table>")
         out.append('<p class="small muted">Sheet counts come from part area plus a waste allowance; real nesting can need one more sheet. Check the layout in your nesting or laser software.</p>')
         summary["sheets"] = sheets

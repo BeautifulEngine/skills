@@ -14,7 +14,8 @@
   .spec { border: 0.9pt solid var(--rule); border-radius: var(--radius); padding: 10pt 12pt; margin-bottom: 8pt; break-inside: avoid; }
   .spec .sample { font-size: 22pt; line-height: 1.15; margin-bottom: 4pt; }
   .ui-demo { display: flex; gap: 10pt; align-items: center; margin: 6pt 0; }
-  .ui-demo .btn { padding: 6pt 14pt; border-radius: var(--radius); background: var(--brand); color: var(--brand-ink); font-size: 9.5pt; font-weight: 600; }
+  /* Buttons can be rounder than cards: set --btn-radius (e.g. 999px for pills) in the tokens if so. */
+  .ui-demo .btn { padding: 6pt 14pt; border-radius: var(--btn-radius, var(--radius)); white-space: nowrap; background: var(--brand); color: var(--brand-ink); font-size: 9.5pt; font-weight: 600; }
   .ui-demo .btn.alt { background: transparent; color: var(--ink); border: 0.9pt solid var(--ink); }
 </style>
 </head><body>

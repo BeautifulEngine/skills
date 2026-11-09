@@ -1,0 +1,3 @@
+{"materials_subtotal": 1100.29, "tax": 104.53, "total": 1204.82, "lines": 12, "battery_hours": 10.4, "draw_w": 294, "planned_w": 368, "amps": 30.6, "circuits_20a": null, "sheets": {"1/2 ply (48x96)": 2, "1/4 white acrylic (24x18)": 7, "1/8 black acrylic (24x18)": 7}}
+WARN 'Side panel' (8x96 in) won't fit the 24x18 bed: cut it on a CNC or split it
+WARN 'Back panel' (24x96 in) won't fit the 24x18 bed: cut it on a CNC or split it
