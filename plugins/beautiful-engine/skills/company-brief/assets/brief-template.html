@@ -1,0 +1,429 @@
+<!doctype html>
+<!--
+  Company Brief skeleton. Copy to the working folder as brief.html, then:
+  1. Paste the <link> tags printed by scripts/fonts.py where marked.
+  2. Paste the <style> block printed by scripts/tokens.py where marked.
+  3. Replace every {{placeholder}}. The renderer fails the audit if any are left.
+  4. Delete optional sections you have nothing real for, and renumber the h3 .num labels.
+  Component markup and writing rules: references/components.md
+-->
+<html lang="en"><head><meta charset="utf-8">
+<title>{{Company}} — Company Brief</title>
+<!-- FONT LINKS (scripts/fonts.py) -->
+<link rel="stylesheet" href="brief.css">
+<!-- TOKENS (scripts/tokens.py) -->
+<style>
+/* Per-brief overrides go here, kept small: cover art, display size, a dark callout in brand colors. */
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <!-- optional: <div class="art"> abstract brand-flavored SVG/CSS, never the logo </div> -->
+  <div class="kicker">Company Brief · {{Month Year}}</div>
+  <h1>{{Company}}</h1>
+  <div class="dek">{{One sentence: what they are, in plain words.}} A full read on the company, its people, its brand, and how to talk to it.</div>
+  <!-- personal mode only; delete in shareable mode -->
+  <div><span class="pill">Prepared for {{Name}} · {{purpose, e.g. interview prep for Senior Designer}}</span></div>
+  <div class="toc">
+    <div><span>Summary</span>The 60-second read</div>
+    <div><span>Part one</span>The company</div>
+    <div><span>Part two</span>People &amp; culture</div>
+    <div><span>Part three</span>Brand &amp; marketing</div>
+    <div><span>Part four</span>Market &amp; competition</div>
+    <div><span>Part five</span>{{Your play | How to talk to them}}</div>
+  </div>
+  <div class="meta">
+    <b>Website</b> {{domain}} · <b>HQ</b> {{City, ST}} · <b>Founded</b> {{year}}<br>
+    <b>Research date</b> {{Month D, YYYY}} · Public sources plus {{Company}}’s live site and careers pages
+  </div>
+  <div class="swatch-strip"><span style="background:{{#hex}}"></span><span style="background:{{#hex}}"></span><span style="background:{{#hex}}"></span><span style="background:{{#hex}}"></span><span style="background:{{#hex}}"></span></div>
+  <div class="disclaimer">Independent research brief. Not affiliated with or endorsed by {{Company}}. Not legal or financial advice.</div>
+</div>
+
+<!-- ============ EXECUTIVE SUMMARY (must fit on page 2) ============ -->
+<div class="summary">
+<div class="part-head first"><div class="label">Executive summary</div><h2>The 60-second read</h2></div>
+
+<div class="callout big">
+  <div class="title">Bottom line</div>
+  <p>{{3–4 sentences: what the company is, its momentum, what that means for someone joining or pitching, and the main tension.}}</p>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="v">{{2019}}</div><div class="k">Founded</div><div class="n">{{HQ city}}</div></div>
+  <div class="stat"><div class="v">{{$X}}</div><div class="k">{{Valuation | Market cap}}</div><div class="n">{{round, date}}</div></div>
+  <div class="stat"><div class="v">{{$X}}</div><div class="k">{{Revenue | ARR}}</div><div class="n">{{as of, source}}</div></div>
+  <div class="stat"><div class="v">{{N}}</div><div class="k">Employees</div><div class="n">{{source, date}}</div></div>
+  <div class="stat"><div class="v">{{4.2 / 5}}</div><div class="k">{{Glassdoor}}</div><div class="n">{{N reviews · % recommend}}</div></div>
+  <div class="stat"><div class="v">{{N}}</div><div class="k">Open roles</div><div class="n">{{as of date}}</div></div>
+</div>
+
+<div class="callout accent">
+  <div class="title">Three things to know before you walk in</div>
+  <ul>
+    <li><b>{{Lead-in.}}</b> {{One or two sentences with a number or date.}}</li>
+    <li><b>{{Lead-in.}}</b> {{…}}</li>
+    <li><b>{{Lead-in.}}</b> {{…}}</li>
+  </ul>
+</div>
+
+<h3><span class="num">SIGNALS</span>Scorecard</h3>
+<!-- 1–5 filled dots. Each "why" names the evidence. "Fit for you" only in personal mode. -->
+<div class="score"><div class="k">Stability</div><div class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><div class="why">{{evidence}}</div></div>
+<div class="score"><div class="k">Momentum</div><div class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><div class="why">{{evidence}}</div></div>
+<div class="score"><div class="k">Culture</div><div class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><div class="why">{{evidence}}</div></div>
+<div class="score"><div class="k">Hiring and pay</div><div class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><div class="why">{{evidence}}</div></div>
+<div class="score"><div class="k">Brand ambition</div><div class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><div class="why">{{evidence}}</div></div>
+<div class="score"><div class="k">Fit for you</div><div class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><div class="why">{{what maps, and the gap}}</div></div>
+</div>
+
+<!-- ============ WHAT'S CHANGED (refresh mode only; delete this whole part otherwise) ============ -->
+<div class="part">
+  <div class="part-head"><div class="label">Refresh</div><h2>What’s changed since {{old research date}}</h2></div>
+  <table class="data">
+    <thead><tr><th>Area</th><th>Then</th><th>Now</th><th>Why it matters</th></tr></thead>
+    <tbody>
+      <tr><td><b>{{Area, e.g. Money, Leadership, Hiring}}</b></td><td>{{old fact · date}}</td><td>{{new fact · date}} <span class="tag verified">Verified</span></td><td>{{one line}}</td></tr>
+    </tbody>
+  </table>
+  <h4>New since last time</h4>
+  <div class="media">
+    <div class="item"><div class="date">{{Mon D, YYYY}}</div><div><div class="t"><a href="{{url}}">{{headline}}</a></div><div class="src">{{outlet}}</div><p>{{one line on why it matters}}</p></div></div>
+  </div>
+</div>
+
+<!-- ============ PART ONE ============ -->
+<div class="part">
+  <div class="part-head"><div class="label">Part one</div><h2>The company</h2></div>
+
+  <section>
+    <h3><span class="num">01</span>At a glance</h3>
+    <table class="glance">
+      <tr><th>Name</th><td>{{Brand · domain. Legal entity if different.}} <span class="tag verified">Verified</span></td></tr>
+      <tr><th>Founded</th><td>{{year, city}}</td></tr>
+      <tr><th>Founders</th><td>{{names, roles, where they came from}}</td></tr>
+      <tr><th>Leadership</th><td>{{CEO and the 2–4 leaders that matter for this role}}</td></tr>
+      <tr><th>Offices</th><td>{{HQ, other offices, remote policy}}</td></tr>
+      <tr><th>Employees</th><td>{{count, source, date, growth}}</td></tr>
+      <tr><th>Customers</th><td>{{count and recognizable names}}</td></tr>
+      <tr><th>Investors</th><td>{{lead investors, or ticker if public}}</td></tr>
+      <tr><th>Mission</th><td>“{{their exact words}}”</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h3><span class="num">02</span>What they do</h3>
+    <p class="lede">{{Plain-language explanation a smart friend outside the industry would follow.}}</p>
+    <h4>Products</h4>
+    <table class="data">
+      <thead><tr><th>Product</th><th>What it does</th><th>Launched</th></tr></thead>
+      <tbody>
+        <tr><td><b>{{Product}}</b></td><td>{{…}}</td><td class="num">{{date}}</td></tr>
+      </tbody>
+    </table>
+    <h4>How they make money</h4>
+    <p>{{pricing model, who buys, typical deal size if known}}</p>
+    <h4>Known for</h4>
+    <p>{{reputation in one short paragraph}}</p>
+  </section>
+
+  <section>
+    <h3><span class="num">03</span>Mission, vision &amp; goals</h3>
+    <blockquote><p>“{{quote from a founder or exec about where the company is going}}”</p><cite>{{Name, role · outlet, date}}</cite></blockquote>
+    <ul>
+      <li><b>{{Goal}}.</b> {{evidence}}</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3><span class="num">04</span>History</h3>
+    <div class="timeline">
+      <div class="tl"><div class="when">{{YYYY}}</div><div>{{what happened}}</div></div>
+      <div class="tl"><div class="when">{{Mon YYYY}}</div><div>{{…}}</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h3><span class="num">05</span>Financials</h3>
+    <div class="stats four">
+      <div class="stat"><div class="v">{{$X}}</div><div class="k">Total raised</div></div>
+      <div class="stat"><div class="v">{{$X}}</div><div class="k">Last valuation</div></div>
+      <div class="stat"><div class="v">{{$X}}</div><div class="k">Revenue</div></div>
+      <div class="stat"><div class="v">{{X%}}</div><div class="k">Growth</div></div>
+    </div>
+    <table class="data">
+      <thead><tr><th>Round</th><th>Date</th><th>Amount</th><th>Valuation</th><th>Led by</th></tr></thead>
+      <tbody>
+        <tr><td>{{Series A}}</td><td class="num">{{date}}</td><td class="num">{{$X}}</td><td class="num">{{$X}}</td><td>{{investor}}</td></tr>
+      </tbody>
+    </table>
+    <p>{{What the numbers mean: runway, profitability, layoffs, IPO talk. Tag every figure.}}</p>
+  </section>
+</div>
+
+<!-- ============ PART TWO ============ -->
+<div class="part">
+  <div class="part-head"><div class="label">Part two</div><h2>People &amp; culture</h2></div>
+
+  <section>
+    <h3><span class="num">06</span>People to know</h3>
+    <!-- public professional info only; no photos -->
+    <div class="people">
+      <div class="person"><div class="name">{{Name}}</div><div class="role">{{Title}}</div><p>{{why they matter to you; something they said or made}}</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h3><span class="num">07</span>Hiring</h3>
+    <div class="stats">
+      <div class="stat"><div class="v">{{N}}</div><div class="k">Open roles</div><div class="n">{{careers page, date}}</div></div>
+      <div class="stat"><div class="v">{{Dept N}}</div><div class="k">Biggest team hiring</div></div>
+      <div class="stat"><div class="v">{{N}}</div><div class="k">Remote roles</div></div>
+    </div>
+    <table class="data">
+      <thead><tr><th>Department</th><th>Open</th><th>Read</th></tr></thead>
+      <tbody>
+        <tr><td>{{Engineering}}</td><td class="num">{{N}}</td><td>{{what it signals}}</td></tr>
+      </tbody>
+    </table>
+    <h4>Roles closest to {{the target role}}</h4>
+    <table class="data">
+      <thead><tr><th>Role</th><th>Location</th><th>Pay</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><b>{{Title}}</b></td><td>{{Remote US}}</td><td class="num">{{$X–$Y}}</td><td>{{interview steps, team, tools}}</td></tr>
+      </tbody>
+    </table>
+    <h4>How they hire</h4>
+    <p>{{interview process from postings or reviews, benefits, perks, remote policy}}</p>
+  </section>
+
+  <section>
+    <h3><span class="num">08</span>What employees say</h3>
+    <div class="stats four">
+      <div class="stat"><div class="v">{{4.1}}</div><div class="k">Glassdoor</div><div class="n">{{N reviews}}</div></div>
+      <div class="stat"><div class="v">{{82%}}</div><div class="k">Recommend</div></div>
+      <div class="stat"><div class="v">{{90%}}</div><div class="k">CEO approval</div></div>
+      <div class="stat"><div class="v">{{3.9}}</div><div class="k">{{Indeed | Blind | Comparably}}</div></div>
+    </div>
+    <div class="cols">
+      <div class="card good"><h4>Praised</h4><ul><li>{{theme, with how often it comes up}}</li></ul></div>
+      <div class="card bad"><h4>Criticized</h4><ul><li>{{theme}}</li></ul></div>
+    </div>
+    <blockquote><p>“{{short review quote, under 25 words}}”</p><cite>{{role, platform, date}}</cite></blockquote>
+  </section>
+
+  <section>
+    <h3><span class="num">09</span>Culture &amp; values</h3>
+    <table class="glance">
+      <tr><th>{{Value name}}</th><td>{{their words, then what it looks like day to day}}</td></tr>
+    </table>
+  </section>
+</div>
+
+<!-- ============ PART THREE ============ -->
+<div class="part">
+  <div class="part-head"><div class="label">Part three</div><h2>Brand &amp; marketing</h2></div>
+
+  <section>
+    <h3><span class="num">10</span>Brand identity</h3>
+    <div class="cols">
+      <div class="card plain"><h4>Logo</h4><p class="small">{{Describe the mark and wordmark in words: shape, case, typeface style, how it's used.}} This brief describes the logo rather than reproducing it.</p></div>
+      <div class="card plain"><h4>Art direction</h4><p class="small">{{photography, illustration, layout, motion, recent redesigns}}</p></div>
+    </div>
+    <h4>Color, from the live site’s CSS <span class="tag verified">Verified</span></h4>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:{{#hex}}"></div><div class="lbl"><b>{{Name}}</b>{{#HEX}} · {{use}}</div></div>
+    </div>
+    <h4>Type</h4>
+    <div class="type-spec">
+      <div class="sample" style="font-family:var(--font-display);font-weight:var(--display-weight)">{{A headline from their site}}</div>
+      <div class="small muted">{{Brand font, foundry, license}}. Set here in {{stand-in}}, the closest free match.</div>
+    </div>
+    <h4>Voice</h4>
+    <div class="voice">
+      <div class="card"><h4>Sounds like</h4><ul><li>“{{real line from their site}}”</li></ul></div>
+      <div class="card plain"><h4>Never sounds like</h4><ul><li>{{…}}</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <h3><span class="num">11</span>Brand kit &amp; who makes it</h3>
+    <!-- Links only: never embed or download logos, fonts, or brand images. Open every link before delivery. Rows for logo and guidelines are required in every mode; add the others in brand-work mode or when found. Status: Current, Dated, Outdated, Request access, Not found. -->
+    <p class="kpi-note">Links to {{Company}}’s own files where they exist. Use is governed by {{Company}}’s <a href="{{usage terms url}}">{{press, media or trademark terms}}</a>.</p>
+    <table class="data">
+      <thead><tr><th>Asset</th><th>Format</th><th>Source</th><th>Date</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><b><a href="{{url}}">Primary logo</a></b></td><td>{{SVG, EPS, PDF}}</td><td>{{Press kit}} <span class="tag verified">Official</span></td><td class="num">{{Mon YYYY}}</td><td>{{Current}}</td></tr>
+        <tr><td><b><a href="{{url}}">Brand guidelines</a></b></td><td>{{PDF, 48 pp}}</td><td>{{Brand site}} <span class="tag verified">Official</span></td><td class="num">{{Mon YYYY}}</td><td>{{Current | Dated: reason}}</td></tr>
+        <tr><td><b>{{Fonts}}</b></td><td>{{family names}}</td><td>{{foundry or Google Fonts link}}</td><td class="num">—</td><td>{{Commercial license | Free}}</td></tr>
+        <tr><td><b>{{Color specs}}</b></td><td>{{HEX, RGB, CMYK, Pantone}}</td><td>{{guidelines, or site CSS}}</td><td class="num">{{Mon YYYY}}</td><td>{{Current}}</td></tr>
+        <tr><td><b>{{Press images, templates, icons, boilerplate…}}</b></td><td>{{…}}</td><td>{{…}}</td><td class="num">{{…}}</td><td>{{…}}</td></tr>
+      </tbody>
+    </table>
+    <h4>Rules a designer needs</h4>
+    <ul><li>{{clear space, minimum size, color versions, backgrounds, co-branding, main don'ts, paraphrased from the guidelines; or one line saying no public guidelines were found and where you looked}}</li></ul>
+    <!-- brand-work mode only; delete otherwise -->
+    <div class="callout accent"><div class="title">Ask the client for</div><ul><li>{{the gaps above, as a kickoff request list}}</li></ul></div>
+    <table class="glance">
+      <tr><th>In-house team</th><td>{{brand/design leads, team size}}</td></tr>
+      <tr><th>Agencies</th><td>{{agency of record, studios, credits}}</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h3><span class="num">12</span>Advertising &amp; campaigns</h3>
+    <div class="media">
+      <div class="item"><div class="date">{{Mon YYYY}}</div><div><div class="t">{{Campaign}}</div><div class="src">{{channel · agency}}</div><p>{{idea, and how it landed}}</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h3><span class="num">13</span>Activations, events &amp; sponsorships</h3>
+    <div class="media">
+      <div class="item"><div class="date">{{Mon YYYY}}</div><div><div class="t">{{Event}}</div><div class="src">{{city · format}}</div><p>{{what they built or did}}</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h3><span class="num">14</span>Social, video &amp; podcasts</h3>
+    <table class="data">
+      <thead><tr><th>Channel</th><th>Handle</th><th>Audience</th><th>What they post</th></tr></thead>
+      <tbody>
+        <tr><td>{{LinkedIn}}</td><td>{{handle}}</td><td class="num">{{N or Unknown}}</td><td>{{…}}</td></tr>
+      </tbody>
+    </table>
+    <h4>Watch or listen before you talk to them</h4>
+    <div class="media">
+      <div class="item"><div class="date">{{Mon YYYY}}</div><div><div class="t"><a href="{{url}}">{{Episode or video title}}</a></div><div class="src">{{show · who speaks}}</div><p>{{why it's worth the time}}</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h3><span class="num">15</span>In the news (last 12 months)</h3>
+    <div class="media">
+      <div class="item"><div class="date">{{Mon D}}</div><div><div class="t"><a href="{{url}}">{{Headline}}</a></div><div class="src">{{outlet}}</div><p>{{one line on why it matters}}</p></div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PART FOUR ============ -->
+<div class="part">
+  <div class="part-head"><div class="label">Part four</div><h2>Market &amp; competition</h2></div>
+
+  <section>
+    <h3><span class="num">16</span>The market</h3>
+    <p>{{category, size with source, where it's heading, where this company sits}}</p>
+  </section>
+
+  <section>
+    <h3><span class="num">17</span>Competitors</h3>
+    <table class="data">
+      <thead><tr><th>Company</th><th>Positioning</th><th>Scale</th><th>vs. {{Company}}</th></tr></thead>
+      <tbody>
+        <tr class="us"><td><b>{{Company}}</b></td><td>{{…}}</td><td class="num">{{…}}</td><td>—</td></tr>
+        <tr><td><b>{{Competitor}}</b></td><td>{{…}}</td><td class="num">{{…}}</td><td>{{…}}</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h3><span class="num">18</span>Customers &amp; partners</h3>
+    <p>{{named customers, case studies, key partnerships}}</p>
+  </section>
+
+  <section>
+    <h3><span class="num">19</span>Risks &amp; red flags</h3>
+    <div class="callout warn"><div class="title">Watch for</div>
+      <ul><li><b>{{Risk}}.</b> {{evidence and what to ask about it}}</li></ul>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PART FIVE ============ -->
+<div class="part">
+  <div class="part-head"><div class="label">Part five</div><h2>{{Your play | How to talk to them}}</h2></div>
+
+  <section>
+    <h3><span class="num">20</span>Their language</h3>
+    <dl class="lingo">
+      <dt>{{term}}</dt><dd>{{what they mean by it, and where it shows up}}</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h3><span class="num">21</span>What they care about → how to talk about it</h3>
+    <table class="data">
+      <thead><tr><th>They care about</th><th>Evidence</th><th>Say something like</th></tr></thead>
+      <tbody>
+        <tr><td><b>{{priority}}</b></td><td>{{where you saw it}}</td><td>{{a line in the reader's own voice}}</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h3><span class="num">22</span>The 30-second pitch</h3>
+    <div class="callout big"><p>{{Short spoken paragraph using their words.}}</p></div>
+  </section>
+
+  <section>
+    <h3><span class="num">23</span>{{Your angle | Angles that land}}</h3>
+    <!-- personal mode: map the reader's real work to their priorities. shareable: generic angles by background. -->
+    <div class="cols">
+      <div class="card good"><h4>Lead with</h4><ul><li>{{…}}</li></ul></div>
+      <div class="card plain"><h4>Be ready for</h4><ul><li>{{gap and how to address it}}</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <h3><span class="num">24</span>Interview prep</h3>
+    <ul>
+      <!-- brand-work mode: retitle this section "Kickoff prep" and cover what the brand team will expect, what to bring, and their likely questions -->
+      <li><b>{{Process step or format}}.</b> {{what to expect, from postings or reviews}}</li>
+      <li><b>Likely questions</b> (inferred from {{source}}):
+        <ul><li>{{question}}</li></ul>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h3><span class="num">25</span>Questions to ask</h3>
+    <ol class="big">
+      <li>{{question that shows you did the reading}}<span class="why">{{why it lands, or what it uncovers}}</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h3><span class="num">26</span>Do’s &amp; don’ts</h3>
+    <div class="cols">
+      <div class="card good"><h4>Do</h4><ul><li>{{…}}</li></ul></div>
+      <div class="card bad"><h4>Don’t</h4><ul><li>{{…}}</li></ul></div>
+    </div>
+  </section>
+
+  <!-- only when the reader has an offer in hand -->
+  <section>
+    <h3><span class="num">27</span>Before you sign</h3>
+    <table class="glance">
+      <tr><th>{{Equity}}</th><td>{{what to ask, what's typical at this stage}}</td></tr>
+    </table>
+    <p class="small muted">Not legal or financial advice.</p>
+  </section>
+
+  <section>
+    <h3><span class="num">28</span>Outreach</h3>
+    <div class="callout accent"><div class="title">{{To whom, through which channel}}</div><p>{{short note in their language; under 90 words}}</p></div>
+  </section>
+
+  <section>
+    <h3><span class="num">29</span>Sources</h3>
+    <ol class="sources">
+      <li><a href="{{url}}">{{Page title}}</a> <span class="d">· {{outlet, date or accessed date}}</span></li>
+    </ol>
+    <!-- Credit line: keep it unless the person asks to leave it out. -->
+    <p class="credit">Made with the free <a href="https://github.com/BeautifulEngine/company-brief">Company Brief</a> skill for Claude, by <a href="https://www.beautifulengine.com">Beautiful Engine · beautifulengine.com</a></p>
+  </section>
+</div>
+
+</body></html>

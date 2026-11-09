@@ -1,0 +1,77 @@
+<!doctype html>
+<!--
+  Side-by-side comparison of two companies (two offers, two employers, two prospective clients).
+  Copy to the working folder as compare.html. Use NEUTRAL tokens (tokens.py with --brand "#1f2430" --accent "#3d4452"),
+  and show each company's own color only through the --co variable on its column header and dot.
+  Every figure carries a tag and appears in Sources. 3–5 pages. Render to <A>-vs-<B>-<YYYY-MM>.pdf.
+-->
+<html lang="en"><head><meta charset="utf-8">
+<title>{{A}} vs {{B}} — Comparison</title>
+<!-- FONT LINKS (scripts/fonts.py) -->
+<link rel="stylesheet" href="brief.css">
+<!-- TOKENS (scripts/tokens.py, neutral colors) -->
+<style>
+@page :first { margin: 0.72in 0.8in 0.78in 0.8in; }
+</style>
+</head>
+<body>
+
+<div class="sheet-head">
+  <div>
+    <div class="kicker">Comparison · {{purpose, e.g. two offers for a Senior Designer | two prospective clients}}</div>
+    <h1><span class="co-dot" style="--co:{{A color}}"></span>{{A}} vs <span class="co-dot" style="--co:{{B color}}"></span>{{B}}</h1>
+  </div>
+  <div class="meta">Research date {{Month D, YYYY}}<br>Independent research. Not affiliated with<br>or endorsed by either company.</div>
+</div>
+
+<div class="callout big"><div class="title">Bottom line</div><p>{{Which one fits what, in 2–3 sentences. Name the deciding factor. In shareable mode, no personal fit.}}</p></div>
+
+<section>
+  <h3><span class="num">01</span>Side by side</h3>
+  <!-- Shade the stronger cell with class="edge" only when the difference is clear and sourced. -->
+  <table class="vs">
+    <thead><tr><th></th><th style="--co:{{A color}}">{{A}}</th><th style="--co:{{B color}}">{{B}}</th></tr></thead>
+    <tbody>
+      <tr><th>What they do</th><td>{{one line}}</td><td>{{one line}}</td></tr>
+      <tr><th>Founded · HQ</th><td>{{year · city}}</td><td>{{year · city}}</td></tr>
+      <tr><th>Size</th><td>{{employees}} <span class="tag verified">Verified</span></td><td>{{employees}}</td></tr>
+      <tr><th>Money</th><td>{{revenue, growth, funding or market cap}}</td><td>{{…}}</td></tr>
+      <tr><th>Momentum</th><td>{{last 12 months in a line}}</td><td>{{…}}</td></tr>
+      <tr><th>Pay for the role</th><td>{{posted range or offer}}</td><td>{{…}}</td></tr>
+      <tr><th>Where you'd work</th><td>{{remote, hybrid, office}}</td><td>{{…}}</td></tr>
+      <tr><th>Employee reviews</th><td>{{rating, count, platform}}</td><td>{{…}}</td></tr>
+      <tr><th>Culture in a line</th><td>{{…}}</td><td>{{…}}</td></tr>
+      <tr><th>Brand and creative</th><td>{{how much design matters there}}</td><td>{{…}}</td></tr>
+      <tr><th>Biggest risk</th><td>{{…}}</td><td>{{…}}</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h3><span class="num">02</span>Scorecard</h3>
+  <div class="score vs-score"><div class="k"></div><div class="small"><b>{{A}}</b></div><div class="small"><b>{{B}}</b></div><div></div></div>
+  <div class="score vs-score"><div class="k">{{Stability}}</div><div class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><div class="meter"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><div class="why">{{why, one line}}</div></div>
+  <!-- rows: Stability, Momentum, Culture, Hiring and pay, Brand ambition, Fit for you (personal mode only) -->
+</section>
+
+<section>
+  <h3><span class="num">03</span>The case for each</h3>
+  <div class="cols">
+    <div class="card plain"><h4>Choose {{A}} if…</h4><ul><li>{{…}}</li></ul></div>
+    <div class="card plain"><h4>Choose {{B}} if…</h4><ul><li>{{…}}</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <h3><span class="num">04</span>What would settle it</h3>
+  <ol class="big"><li>{{a question to ask one of them, or a fact to check}}<span class="why">{{why it decides things}}</span></li></ol>
+  <!-- offer mode only: a Before you decide table (pay, equity, start date, deadlines, benefits) -->
+</section>
+
+<section>
+  <h3><span class="num">05</span>Sources</h3>
+  <ol class="sources"><li><a href="{{url}}">{{Title}}</a> <span class="d">· {{Outlet}} · {{date}}</span></li></ol>
+  <!-- Credit line: keep it unless the person asks to leave it out. -->
+  <p class="credit">Made with the free <a href="https://github.com/BeautifulEngine/company-brief">Company Brief</a> skill for Claude, by <a href="https://www.beautifulengine.com">Beautiful Engine · beautifulengine.com</a></p>
+</section>
+</body></html>

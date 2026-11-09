@@ -1,0 +1,65 @@
+<!doctype html>
+<!--
+  One-page cheat sheet that ships with every brief: the things to have open during a call.
+  Copy to the working folder as cheatsheet.html, paste the SAME font links and tokens block as brief.html,
+  fill it from the finished brief (no new facts), and render to <Company>-Cheat-Sheet-<YYYY-MM>.pdf.
+  It must fit on ONE page: cut list items before shrinking type. Shareable mode: no name, use "Angles that land".
+-->
+<html lang="en"><head><meta charset="utf-8">
+<title>{{Company}} — Cheat Sheet</title>
+<!-- FONT LINKS (scripts/fonts.py) -->
+<link rel="stylesheet" href="brief.css">
+<!-- TOKENS (scripts/tokens.py) -->
+<style>
+@page { margin: 0.5in 0.55in 0.5in; }
+@page :first { margin: 0.5in 0.55in 0.5in; }
+</style>
+</head>
+<body class="sheet-page">
+
+<div class="sheet-head">
+  <div>
+    <div class="kicker">Cheat sheet · {{purpose, e.g. interview for Senior Brand Designer | kickoff with the brand team | general}}</div>
+    <h1>{{Company}}</h1>
+  </div>
+  <div class="meta">{{domain}} · {{HQ city}}<br>Research date {{Month D, YYYY}}<br>Full brief: {{Company}}-Company-Brief-{{YYYY-MM}}.pdf</div>
+</div>
+
+<div class="callout big"><p><b>Bottom line.</b> {{the brief's bottom line in two sentences}}</p></div>
+
+<div class="stats">
+  <div class="stat"><div class="v">{{v}}</div><div class="k">{{label}}</div><div class="n">{{date or note}}</div></div>
+  <div class="stat"><div class="v">{{v}}</div><div class="k">{{label}}</div><div class="n">{{note}}</div></div>
+  <div class="stat"><div class="v">{{v}}</div><div class="k">{{label}}</div><div class="n">{{note}}</div></div>
+  <div class="stat"><div class="v">{{v}}</div><div class="k">{{label}}</div><div class="n">{{note}}</div></div>
+  <div class="stat"><div class="v">{{v}}</div><div class="k">{{label}}</div><div class="n">{{note}}</div></div>
+  <div class="stat"><div class="v">{{v}}</div><div class="k">{{label}}</div><div class="n">{{note}}</div></div>
+</div>
+
+<div class="sheet-grid">
+  <div>
+    <h4>Know this</h4>
+    <ul><li>{{three things to know, one line each}}</li></ul>
+    <h4>{{Your 30-second pitch | Angles that land}}</h4>
+    <div class="pitch">{{the pitch, cut to about 60 words | 2–3 angles, one line each}}</div>
+    <h4>Talking points</h4>
+    <ul><li><b>{{what they care about}}:</b> {{what to say, one line}}</li></ul>
+    <h4>Their words</h4>
+    <dl class="lingo"><dt>{{term}}</dt><dd>{{meaning, a few words}}</dd></dl>
+  </div>
+  <div>
+    <h4>People to know</h4>
+    <ul><li><b>{{Name}}</b>, {{title}}: {{why they matter, a few words}}</li></ul>
+    <h4>Questions to ask</h4>
+    <ol><li>{{the 4–5 best questions from the brief}}</li></ol>
+    <h4>Watch for</h4>
+    <ul><li>{{2–3 risks or red flags, one line each}}</li></ul>
+    <h4>Do and don't</h4>
+    <ul><li><b>Do</b> {{one}}</li><li><b>Don't</b> {{one}}</li></ul>
+  </div>
+</div>
+
+<div class="sheet-foot">Independent research. Not affiliated with or endorsed by {{Company}}. Sources and confidence tags for every figure are in the full brief.<br>
+<!-- Credit line: keep it unless the person asks to leave it out. -->
+Made with the free <a href="https://github.com/BeautifulEngine/company-brief">Company Brief</a> skill for Claude, by <a href="https://www.beautifulengine.com">Beautiful Engine · beautifulengine.com</a></div>
+</body></html>

@@ -1,0 +1,13 @@
+{
+  "name": "beautiful-engine",
+  "displayName": "Beautiful Engine",
+  "description": "Skills by Beautiful Engine, a creative studio in Los Angeles. Includes Company Brief: name any company and get a designed, sourced PDF brief in its brand colors, a one-page cheat sheet, and a brand kit.",
+  "author": {
+    "name": "Beautiful Engine",
+    "url": "https://www.beautifulengine.com"
+  },
+  "homepage": "https://github.com/BeautifulEngine/skills",
+  "repository": "https://github.com/BeautifulEngine/skills",
+  "license": "MIT",
+  "keywords": ["company-research", "job-search", "interview-preparation", "branding", "design"]
+}
