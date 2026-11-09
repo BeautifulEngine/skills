@@ -6,24 +6,24 @@ Claude skills made by [Beautiful Engine](https://www.beautifulengine.com), a cre
 
 ## Skills
 
-| Skill | What you get | Try asking | Claude app |
+| Skill | What you get | Try asking | Its own page |
 |---|---|---|---|
 | **Company Brief** | A designed, sourced PDF on any company in its own brand colors, plus a one-page cheat sheet and a brand kit | "Make me a company brief on Figma." | [Get it](https://github.com/BeautifulEngine/company-brief) |
-| **Application Kit** | A tailored resume and cover letter (Word and PDF), a fit check, portfolio picks, outreach drafts and a follow-up plan | "Tailor my resume for this posting: <link>." | [Download](dist/application-kit.zip) |
-| **Case Study** | A portfolio case study as a web page, PDF and Markdown, tailored to a company if you like | "Write a case study for this project. Notes attached." | [Download](dist/case-study.zip) |
-| **Sponsorship Pitch** | A 16:9 partnership deck: why the brand and property fit, three activation ideas, tiers, measurement, plus speaker notes | "Sponsorship deck: Rivian x Outside Lands." | [Download](dist/sponsorship-pitch.zip) |
-| **Activation Concepts** | Three experiential concepts with guest journey, floor plan, build notes, budget range and risks | "Three activation concepts for Patagonia at a music festival, $150–250K." | [Download](dist/activation-concepts.zip) |
-| **Project Quote** | A branded quote and SOW with phases, rates, payment schedule and terms, totals computed by a script; also rate cards | "Quote a brand identity for a coffee roaster, 6 weeks." | [Download](dist/project-quote.zip) |
-| **Build Spec** | A fabrication package: BOM with costs, cut list and sheet counts, laser and print settings, power budget, build steps, safety | "Build spec for an 8 ft LED sign that runs on a battery." | [Download](dist/build-spec.zip) |
-| **Brand Snapshot** | A two-page brand reference from any website: colors with contrast checks, fonts and stand-ins, logo notes, voice, plus design tokens | "Brand snapshot for linear.app." | [Download](dist/brand-snapshot.zip) |
-| **Print Listing Kit** | Ready-to-paste 3D model listings for Etsy, Printables, MakerWorld and more, with tags checked against limits, pricing and a photo list | "Listing kit for my hex planter STL." | [Download](dist/print-listing-kit.zip) |
+| **Application Kit** | A tailored resume and cover letter (Word and PDF), a fit check, portfolio picks, outreach drafts and a follow-up plan | "Tailor my resume for this posting: <link>." | [Get it](https://github.com/BeautifulEngine/application-kit) |
+| **Case Study** | A portfolio case study as a web page, PDF and Markdown, tailored to a company if you like | "Write a case study for this project. Notes attached." | [Get it](https://github.com/BeautifulEngine/case-study) |
+| **Sponsorship Pitch** | A 16:9 partnership deck: why the brand and property fit, three activation ideas, tiers, measurement, plus speaker notes | "Sponsorship deck: Rivian x Outside Lands." | [Get it](https://github.com/BeautifulEngine/sponsorship-pitch) |
+| **Activation Concepts** | Three experiential concepts with guest journey, floor plan, build notes, budget range and risks | "Three activation concepts for Patagonia at a music festival, $150–250K." | [Get it](https://github.com/BeautifulEngine/activation-concepts) |
+| **Project Quote** | A branded quote and SOW with phases, rates, payment schedule and terms, totals computed by a script; also rate cards | "Quote a brand identity for a coffee roaster, 6 weeks." | [Get it](https://github.com/BeautifulEngine/project-quote) |
+| **Build Spec** | A fabrication package: BOM with costs, cut list and sheet counts, laser and print settings, power budget, build steps, safety | "Build spec for an 8 ft LED sign that runs on a battery." | [Get it](https://github.com/BeautifulEngine/build-spec) |
+| **Brand Snapshot** | A two-page brand reference from any website: colors with contrast checks, fonts and stand-ins, logo notes, voice, plus design tokens | "Brand snapshot for linear.app." | [Get it](https://github.com/BeautifulEngine/brand-snapshot) |
+| **Print Listing Kit** | Ready-to-paste 3D model listings for Etsy, Printables, MakerWorld and more, with tags checked against limits, pricing and a photo list | "Listing kit for my hex planter STL." | [Get it](https://github.com/BeautifulEngine/print-listing-kit) |
 
-They work well together: run Company Brief before Application Kit or Sponsorship Pitch, take an Activation Concept into a Build Spec, and price either with Project Quote.
+Every skill has its own page with examples and its Claude app download, linked in the last column. They work well together: run Company Brief before Application Kit or Sponsorship Pitch, take an Activation Concept into a Build Spec, and price either with Project Quote.
 
 ## Install in the Claude app (web or desktop)
 
 1. Turn on **Settings > Capabilities > "Code execution and file creation"**.
-2. Download the skill's zip from the table above (open it, then use the download button). Don't unzip it.
+2. Open the skill's page from the table above and download its zip (or grab it from [dist/](dist/) here). Don't unzip it.
 3. Go to **Customize > Skills**, click **+**, then **+ Create skill > Upload a skill**, and upload the zip.
 4. Start a new chat and ask in plain words. Claude picks the right skill on its own.
 
@@ -74,6 +74,7 @@ dist/                                      one zip per skill for the Claude app
 ```
 
 - **After editing anything:** run `scripts/build.sh`, then `claude plugin validate .`, then commit and push. Edit shared files in `shared/`, not inside a skill.
+- **Publish to a skill's own repo** (BeautifulEngine/<skill>) after `scripts/build.sh`: clone that repo, run `scripts/publish-standalone.sh <skill> <path to the clone>`, then commit and push there. It copies the skill folder and zip, and regenerates the landing README and LICENSE. Edit skills here, never in their own repos.
 - **Update Company Brief** after changing it in its own repo: `scripts/sync-skill.sh ../company-brief/company-brief company-brief`.
 - **Add a new skill:** create `plugins/beautiful-engine/skills/<name>/SKILL.md` (with `## Usage`) and its assets, run `scripts/build.sh`, and add a row to the table above. Name skills for what they do, lowercase with hyphens.
 
