@@ -2,8 +2,8 @@
 """Build the sample output and preview image for each skill.
 
 Each sample is the skill's own template head (styles, fonts, tokens) plus a sample body in
-bodies/<skill>.html. Companies and people in samples are fictional, except Brand Snapshot,
-which describes beautifulengine.com.
+bodies/<skill>.html. Samples use real brands: pitch, activation and quote samples are unofficial
+spec work with sourced figures; Case Study and Brand Snapshot cover Beautiful Engine's own work.
 
 Usage (from tools/samples):
   python3 build.py all | <skill> ...

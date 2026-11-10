@@ -59,8 +59,7 @@ sample = SAMPLES.get(name)
 visuals = ""
 if sample:
     pages = ", ".join(c[0].lower() + c[1:] for c in sample["preview"]["captions"])
-    who = ("a snapshot of beautifulengine.com" if name == "brand-snapshot"
-           else "fictional names and figures")
+    who = sample.get("note", "a sample")
     visuals = (f"![Pages from a sample {title}: {pages}](docs/preview.png)\n\n"
                f"**See the full sample:** [{sample['pdf']}](examples/{sample['pdf']}) ({who})\n")
 gif = (f"![Animated demo: example requests typed into Claude, each followed by what the {title} skill makes](docs/how-to-ask.gif)\n\n"

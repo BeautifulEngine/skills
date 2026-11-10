@@ -1,11 +1,11 @@
 {"currency": "USD",
- "rates": {"Creative Director": 165, "Designer": 115, "Producer": 95},
+ "rates": {"Design Director": 175, "Designer": 120},
  "show_hours": false,
  "phases": [
-  {"name": "Discovery", "items": [{"task": "Kickoff, tasting and roastery visit", "role": "Creative Director", "hours": 6}, {"task": "Competitive and shelf audit", "role": "Designer", "hours": 10}, {"task": "Brand strategy brief", "role": "Creative Director", "hours": 8}]},
-  {"name": "Identity concepts", "items": [{"task": "Three logo and wordmark directions", "role": "Creative Director", "hours": 14}, {"task": "Concept development and mockups", "role": "Designer", "hours": 30}, {"task": "Presentation and feedback session", "role": "Creative Director", "hours": 4}]},
-  {"name": "Identity system", "items": [{"task": "Final logo suite and color palette", "role": "Designer", "hours": 22}, {"task": "Typography and brand guidelines (24 pp)", "role": "Designer", "hours": 26}, {"task": "Creative direction and reviews", "role": "Creative Director", "hours": 10}]},
-  {"name": "Packaging", "items": [{"task": "Bag design for 3 SKUs, 12 oz and 2 lb", "role": "Designer", "hours": 34}, {"task": "Print-ready files and dielines", "role": "Designer", "hours": 12}, {"task": "Printer proof review", "role": "Producer", "hours": 6}, {"task": "Printed proofs (pass-through)", "fixed": 480, "note": "at cost"}]}
+  {"name": "Discovery", "items": [{"task": "Kickoff and 2026 recap review", "role": "Design Director", "hours": 6}, {"task": "Category and brand target research", "role": "Designer", "hours": 12}, {"task": "Creative brief", "role": "Design Director", "hours": 4}]},
+  {"name": "Pitch framework", "items": [{"task": "Master deck in Outside Lands branding", "role": "Design Director", "hours": 12}, {"task": "Master deck design", "role": "Designer", "hours": 28}, {"task": "Slide library: audience, assets, tiers, recap", "role": "Designer", "hours": 24}, {"task": "Review session", "role": "Design Director", "hours": 3}]},
+  {"name": "Brand decks", "items": [{"task": "Ideas and activation concepts, 6 brands", "role": "Design Director", "hours": 30}, {"task": "Deck design, 6 decks", "role": "Designer", "hours": 60}, {"task": "Speaker notes and leave-behinds", "role": "Designer", "hours": 12}]},
+  {"name": "Concept renderings", "items": [{"task": "3 activation renderings", "role": "Designer", "hours": 24}, {"task": "Art direction", "role": "Design Director", "hours": 6}, {"task": "Stock and 3D assets (pass-through)", "fixed": 600, "note": "at cost"}]}
  ],
  "contingency_pct": 10, "tax_pct": 0,
- "payment_schedule": [{"milestone": "On signing", "pct": 40}, {"milestone": "Identity concepts approved", "pct": 30}, {"milestone": "Final files delivered", "pct": 30}]}
+ "payment_schedule": [{"milestone": "On signing", "pct": 40}, {"milestone": "Pitch framework approved", "pct": 30}, {"milestone": "Final decks delivered", "pct": 30}]}

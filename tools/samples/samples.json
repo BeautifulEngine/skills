@@ -1,8 +1,8 @@
 {
   "sponsorship-pitch": {
     "template": "pitch-template.html",
-    "title": "Lumen Sparkling × Paloma Park Sessions — Sample",
-    "pdf": "Sample-Lumen-x-Paloma-Park-Sessions-Partnership-Pitch.pdf",
+    "title": "Outside Lands × Rivian — Unofficial Spec Sample",
+    "pdf": "Sample-Outside-Lands-x-Rivian-Partnership-Pitch.pdf",
     "fonts": [
       "Space Grotesk:400,500,600,700",
       "Inter:400,500,600",
@@ -10,9 +10,9 @@
     ],
     "tokens": [
       "--brand",
-      "#2a1740",
+      "#1d2b3a",
       "--accent",
-      "#ff6b4a",
+      "#a8650a",
       "--font-display",
       "Space Grotesk",
       "--font-body",
@@ -26,11 +26,11 @@
       "--radius",
       "12px",
       "--cover-stops",
-      "#2a1740,#5b2160,#c2416b",
+      "#0f1b26,#1d2b3a,#3d5566",
       "--cover-ink",
       "#ffffff",
       "--brand-soft",
-      "#f4eef8"
+      "#eef2f5"
     ],
     "preview": {
       "pages": [
@@ -42,16 +42,17 @@
       "captions": [
         "Title",
         "The opportunity",
-        "An activation idea",
+        "Idea 1: R2 Fog Camp",
         "Partnership tiers"
       ],
       "landscape": true
-    }
+    },
+    "note": "an unofficial spec sample with real brands and sourced figures; not affiliated with or endorsed by Outside Lands or Rivian"
   },
   "activation-concepts": {
     "template": "concepts-template.html",
-    "title": "Northfield Outdoor Co. — Activation Concepts — Sample",
-    "pdf": "Sample-Northfield-Activation-Concepts.pdf",
+    "title": "Patagonia at Outside Lands — Activation Concepts — Unofficial Spec Sample",
+    "pdf": "Sample-Patagonia-at-Outside-Lands-Activation-Concepts.pdf",
     "fonts": [
       "Fraunces:400,600,700",
       "Inter:400,500,600",
@@ -93,36 +94,41 @@
         "Budget and risks"
       ],
       "landscape": true
-    }
+    },
+    "note": "an unofficial spec sample with real brands and sourced figures; not affiliated with or endorsed by Patagonia or Outside Lands"
   },
   "project-quote": {
     "template": "quote-template.html",
-    "title": "Field & Form Studio — Quote — Sample",
-    "pdf": "Sample-Field-and-Form-Quote-Ridge-Coffee.pdf",
+    "title": "Beautiful Engine — Quote for Outside Lands — Spec Sample",
+    "pdf": "Sample-Beautiful-Engine-Quote-Outside-Lands.pdf",
     "fonts": [
-      "Inter Tight:400,500,600,700",
-      "Inter:400,500,600",
+      "Oswald:500,600,700",
+      "Lexend:400,500,600",
       "DM Mono:400,500"
     ],
     "tokens": [
       "--brand",
-      "#1d2433",
+      "#1d2238",
       "--accent",
-      "#c2410c",
+      "#b4452c",
       "--font-display",
-      "Inter Tight",
+      "Oswald",
       "--font-body",
-      "Inter",
+      "Lexend",
       "--font-label",
       "DM Mono",
       "--display-weight",
       "600",
       "--tracking",
-      "-0.02em",
+      "0.005em",
       "--radius",
-      "8px",
+      "12px",
+      "--brand-soft",
+      "#ede2cf",
+      "--accent-soft",
+      "#f7e1d8",
       "--footer",
-      "Field & Form Studio · Quote Q-20261109-01"
+      "Beautiful Engine · Quote Q-20261109-01 · Spec sample"
     ],
     "preview": {
       "pages": [
@@ -135,7 +141,9 @@
         "Scope, timeline and payment",
         "Terms and sign-off"
       ]
-    }
+    },
+    "extra_css": ".letterhead .studio, .doc-title { text-transform: uppercase; letter-spacing: .02em; } .total-box .v { font-size: 22pt; }",
+    "note": "a spec sample from Beautiful Engine to Outside Lands, not a real quote"
   },
   "build-spec": {
     "template": "spec-template.html",
@@ -177,12 +185,13 @@
         "Cut list and sheets",
         "Settings, power and build steps"
       ]
-    }
+    },
+    "note": "a sample project"
   },
   "application-kit": {
     "template": "kit-template.html",
-    "title": "Northwind Studios — Application Prep — Sample",
-    "pdf": "Sample-Northwind-Application-Prep.pdf",
+    "title": "Remote — Application Prep — Sample",
+    "pdf": "Sample-Remote-Senior-Brand-Designer-Application-Prep.pdf",
     "fonts": [
       "Inter Tight:400,500,600,700",
       "Inter:400,500,600",
@@ -204,7 +213,7 @@
       "--tracking",
       "-0.02em",
       "--footer",
-      "Application prep · Senior Brand Designer, Northwind Studios"
+      "Application prep · Senior Brand Designer, Remote · Sample"
     ],
     "preview": {
       "pages": [
@@ -212,15 +221,16 @@
         2
       ],
       "captions": [
-        "Fit check and keywords",
-        "Outreach, stories and follow-ups"
+        "Fit check, keywords and portfolio",
+        "Outreach, stories and hiring steps"
       ]
-    }
+    },
+    "note": "a real job posting from Remote with a fictional applicant"
   },
   "case-study": {
     "template": "case-study-template.html",
-    "title": "Paloma Park Sessions — Case Study — Sample",
-    "pdf": "Sample-Paloma-Park-Sessions-Case-Study.pdf",
+    "title": "ATHLOS — Case Study — Sample",
+    "pdf": "Sample-ATHLOS-Case-Study.pdf",
     "fonts": [
       "Inter Tight:400,500,600,700",
       "Inter:400,500,600",
@@ -228,9 +238,9 @@
     ],
     "tokens": [
       "--brand",
-      "#2a1740",
+      "#2b0f2a",
       "--accent",
-      "#c2416b",
+      "#b3153f",
       "--font-display",
       "Inter Tight",
       "--font-body",
@@ -244,21 +254,18 @@
       "--radius",
       "10px"
     ],
-    "images": [
-      "images"
-    ],
     "preview": {
       "pages": [
         1,
-        2,
-        3
+        2
       ],
       "captions": [
-        "Story and hero image",
-        "Insight, idea and process",
-        "Results and credits"
+        "Story and deck wall",
+        "Insight, idea, process and results"
       ]
-    }
+    },
+    "extra_css": "figure svg { display:block; width:100%; height:auto; border-radius: var(--radius); } .results .v { white-space: nowrap; }",
+    "note": "a real project, written from beautifulengine.com"
   },
   "brand-snapshot": {
     "template": "snapshot-template.html",
@@ -308,7 +315,8 @@
         "Color and type",
         "Logo, interface, voice and resources"
       ]
-    }
+    },
+    "note": "a snapshot of beautifulengine.com"
   },
   "print-listing-kit": {
     "template": "../../brand-snapshot/assets/snapshot-template.html",
@@ -351,6 +359,7 @@
         "Photo list and files"
       ]
     },
-    "extra_css": ".tags { display:flex; flex-wrap:wrap; gap:4pt; margin:4pt 0 8pt; } .tags span { font-family:var(--font-label); font-size:7.8pt; background:var(--brand-soft); color:var(--brand); padding:2pt 6pt; border-radius:3pt; } .listing { border-left:2.5pt solid var(--brand); padding:2pt 0 2pt 12pt; margin:4pt 0 12pt; } .listing .title { font-family:var(--font-display); font-weight:600; font-size:12.5pt; line-height:1.3; margin:2pt 0 2pt; } .count { font-family:var(--font-label); font-size:7.8pt; color:var(--good); } .hero-row { display:grid; grid-template-columns: 1fr 150pt; gap:16pt; align-items:center; } pre.readme { font-family:var(--font-label); font-size:8pt; background:var(--muted-soft); border-radius:var(--radius); padding:10pt 12pt; white-space:pre-wrap; margin:0; } ul.check { list-style:none; padding-left:0; } ul.check li::before { content:'☐ '; color:var(--muted); }"
+    "extra_css": ".tags { display:flex; flex-wrap:wrap; gap:4pt; margin:4pt 0 8pt; } .tags span { font-family:var(--font-label); font-size:7.8pt; background:var(--brand-soft); color:var(--brand); padding:2pt 6pt; border-radius:3pt; } .listing { border-left:2.5pt solid var(--brand); padding:2pt 0 2pt 12pt; margin:4pt 0 12pt; } .listing .title { font-family:var(--font-display); font-weight:600; font-size:12.5pt; line-height:1.3; margin:2pt 0 2pt; } .count { font-family:var(--font-label); font-size:7.8pt; color:var(--good); } .hero-row { display:grid; grid-template-columns: 1fr 150pt; gap:16pt; align-items:center; } pre.readme { font-family:var(--font-label); font-size:8pt; background:var(--muted-soft); border-radius:var(--radius); padding:10pt 12pt; white-space:pre-wrap; margin:0; } ul.check { list-style:none; padding-left:0; } ul.check li::before { content:'☐ '; color:var(--muted); }",
+    "note": "a sample listing for a Beautiful Engine model"
   }
 }
