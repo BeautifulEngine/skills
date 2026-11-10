@@ -59,7 +59,8 @@
     "images": [
       "photos"
     ],
-    "extra_css": ".slide h1, .slide h2 { text-transform: uppercase; } .slide h2 { font-size: 24pt; line-height: 1.08; } .title-slide img.photo { object-fit: cover; } .title-slide .shade { background: linear-gradient(180deg, rgba(10,47,63,.25) 0%, rgba(10,47,63,.55) 45%, rgba(10,47,63,.94) 100%); } .g-1-1-img { grid-template-columns: 1.1fr 1fr; align-items: start; } figure.ph { margin: 0; } figure.ph img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); } figure.ph figcaption { font-size: 8.5pt; color: var(--muted); margin-top: 4pt; } .kpi .v { color: var(--accent); } .chip-row span { background: #ffac03; border-color: #ffac03; color: #0a2f3f; }"
+    "extra_css": ".slide h1, .slide h2 { text-transform: uppercase; } .slide h2 { font-size: 24pt; line-height: 1.08; } .title-slide img.photo { object-fit: cover; } .title-slide .shade { background: linear-gradient(180deg, rgba(10,47,63,.25) 0%, rgba(10,47,63,.55) 45%, rgba(10,47,63,.94) 100%); } .g-1-1-img { grid-template-columns: 1.1fr 1fr; align-items: start; } figure.ph { margin: 0; } figure.ph img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); } figure.ph figcaption { font-size: 8.5pt; color: var(--muted); margin-top: 4pt; } .kpi .v { color: var(--accent); } .chip-row span { background: #ffac03; border-color: #ffac03; color: #0a2f3f; }",
+    "legal": "Sample only · Not affiliated with or endorsed by Outside Lands or Rivian · Photos CC-licensed as credited"
   },
   "activation-concepts": {
     "template": "concepts-template.html",
@@ -121,7 +122,8 @@
     "images": [
       "photos"
     ],
-    "extra_css": ".title-slide img.photo { object-fit: cover; } .title-slide .shade { background: linear-gradient(180deg, rgba(25,23,24,.1) 0%, rgba(25,23,24,.45) 50%, rgba(25,23,24,.9) 100%); } .slide h2 { font-family: 'Newsreader', serif; font-weight: 500; letter-spacing: -0.01em; } .title-slide h1 { font-weight: 500; } .eyebrow { letter-spacing: .04em; } figure.ph { margin: 0; } figure.ph img { display: block; width: 100%; object-fit: cover; border-radius: var(--radius); } figure.ph.strip { margin-top: 16pt; } figure.ph.strip img { height: 1.55in; object-position: center 38%; } figure.ph figcaption { font-size: 9pt; color: var(--muted); margin-top: 5pt; }"
+    "extra_css": ".title-slide img.photo { object-fit: cover; } .title-slide .shade { background: linear-gradient(180deg, rgba(25,23,24,.1) 0%, rgba(25,23,24,.45) 50%, rgba(25,23,24,.9) 100%); } .slide h2 { font-family: 'Newsreader', serif; font-weight: 500; letter-spacing: -0.01em; } .title-slide h1 { font-weight: 500; } .eyebrow { letter-spacing: .04em; } figure.ph { margin: 0; } figure.ph img { display: block; width: 100%; object-fit: cover; border-radius: var(--radius); } figure.ph.strip { margin-top: 16pt; } figure.ph.strip img { height: 1.55in; object-position: center 38%; } figure.ph figcaption { font-size: 9pt; color: var(--muted); margin-top: 5pt; }",
+    "legal": "Sample only · Not affiliated with or endorsed by Patagonia or Outside Lands · Photos CC-licensed as credited"
   },
   "project-quote": {
     "template": "quote-template.html",
@@ -172,7 +174,8 @@
     "note": "a spec sample from Beautiful Engine to Outside Lands, not a real quote",
     "images": [
       "photos"
-    ]
+    ],
+    "legal": "Sample only · Not a real quote · Not affiliated with or endorsed by Outside Lands"
   },
   "build-spec": {
     "template": "spec-template.html",
@@ -215,7 +218,8 @@
         "Settings, power and build steps"
       ]
     },
-    "note": "a sample project"
+    "note": "a sample project",
+    "legal": "Sample only · Prices and settings are illustrative"
   },
   "application-kit": {
     "template": "kit-template.html",
@@ -259,7 +263,8 @@
         "Outreach, stories and hiring steps"
       ]
     },
-    "note": "a real job posting from Remote with a fictional applicant, in Remote's colors"
+    "note": "a real job posting from Remote with a fictional applicant, in Remote's colors",
+    "legal": "Sample only · Fictional applicant · Not affiliated with or endorsed by Remote"
   },
   "case-study": {
     "template": "case-study-template.html",
@@ -308,7 +313,8 @@
     "note": "a real project, written from beautifulengine.com, in ATHLOS colors with a credited, freely licensed venue photo",
     "images": [
       "photos"
-    ]
+    ],
+    "legal": "Sample only · Not affiliated with or endorsed by ATHLOS or the brands named · Photo CC BY 3.0 as credited"
   },
   "brand-snapshot": {
     "template": "snapshot-template.html",
@@ -362,7 +368,8 @@
     "note": "a snapshot of beautifulengine.com",
     "images": [
       "photos"
-    ]
+    ],
+    "legal": "Sample only · Fonts shown are free stand-ins for the brand's own"
   },
   "print-listing-kit": {
     "template": "../../brand-snapshot/assets/snapshot-template.html",
@@ -409,6 +416,7 @@
     "note": "a sample listing for a Beautiful Engine model",
     "images": [
       "photos"
-    ]
+    ],
+    "legal": "Sample only · Prices and comparable listings are illustrative"
   }
 }

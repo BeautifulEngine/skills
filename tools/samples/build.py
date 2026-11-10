@@ -25,6 +25,14 @@ SHARED = os.path.join(ROOT, "shared")
 SKILLS = os.path.join(ROOT, "plugins", "beautiful-engine", "skills")
 
 
+# A small "SAMPLE" mark on every page: top-right of each slide, or the page's top-right margin.
+DECK_STAMP = (".slide::before { content: 'SAMPLE'; position: absolute; top: 0.3in; right: 0.8in; z-index: 2; "
+              "font-family: var(--font-label), monospace; font-size: 7pt; font-weight: 600; letter-spacing: .22em; "
+              "padding: 1.5pt 4pt 1.5pt 6pt; border: 0.6pt solid currentColor; border-radius: 2pt; opacity: .45; }")
+DOC_STAMP = ("@page { @top-right { content: 'SAMPLE'; font-family: 'DM Mono', 'JetBrains Mono', monospace; font-size: 6.5pt; "
+             "letter-spacing: .22em; color: #8a8a8a; } } @page cover { @top-right { content: none; } }")
+
+
 def fonts_html(specs):
     """Install fonts once into tools/samples/node_modules and return <link> tags relative to build/<skill>/."""
     r = subprocess.run(["python3", os.path.join(SHARED, "scripts", "fonts.py"), *specs], cwd=HERE, capture_output=True, text=True)
@@ -83,13 +91,26 @@ def build(skill, cfg):
     for css in ("base.css", "deck.css"):
         shutil.copy(os.path.join(SHARED, "assets", css), work)
     tpl = open(os.path.join(SKILLS, skill, "assets", cfg["template"])).read()
+    is_deck = "deck.css" in tpl.split("<body>")[0]
+    legal = cfg.get("legal", "")
+    tokens = list(cfg["tokens"])
+    if legal and not is_deck:
+        if "--footer" in tokens:
+            tokens[tokens.index("--footer") + 1] = legal
+        else:
+            tokens += ["--footer", legal]
     head = tpl.split("<body>")[0] + "<body>\n"
     head = head.replace("<!-- FONT LINKS (scripts/fonts.py) -->", fonts_html(cfg["fonts"]))
-    head = head.replace("<!-- TOKENS (scripts/tokens.py) -->", tokens_html(cfg["tokens"]))
+    head = head.replace("<!-- TOKENS (scripts/tokens.py) -->", tokens_html(tokens))
     head = re.sub(r"<title>.*?</title>", f"<title>{cfg['title']}</title>", head, flags=re.S)
-    if cfg.get("extra_css"):
-        head = head.replace("</head>", f"<style>{cfg['extra_css']}</style>\n</head>")
+    extra = cfg.get("extra_css", "") + " " + (DECK_STAMP if is_deck else DOC_STAMP)
+    if "<link rel=\"stylesheet\" href=\"base.css\">" not in head and legal:
+        # templates with their own @page (Case Study) get the footer line here
+        extra += f' @page {{ @bottom-left {{ content: "{legal}"; font-family: Inter, sans-serif; font-size: 7pt; color: #6b6b6b; }} }}'
+    head = head.replace("</head>", f"<style>{extra}</style>\n</head>")
     body = open(os.path.join(HERE, "bodies", f"{skill}.html")).read()
+    if is_deck and legal:
+        body = re.sub(r'<div class="foot">.*?</div>', f'<div class="foot">{legal}</div>', body)
     open(os.path.join(work, "doc.html"), "w").write(head + body + "\n</body></html>\n")
     for img in cfg.get("images", []):
         shutil.copytree(os.path.join(HERE, img), os.path.join(work, os.path.basename(img)), dirs_exist_ok=True)
