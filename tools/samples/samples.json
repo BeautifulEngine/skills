@@ -4,33 +4,41 @@
     "title": "Outside Lands × Rivian — Unofficial Spec Sample",
     "pdf": "Sample-Outside-Lands-x-Rivian-Partnership-Pitch.pdf",
     "fonts": [
-      "Space Grotesk:400,500,600,700",
+      "Archivo:600,800,900",
       "Inter:400,500,600",
       "DM Mono:400,500"
     ],
     "tokens": [
       "--brand",
-      "#1d2b3a",
+      "#0a2f3f",
       "--accent",
-      "#a8650a",
+      "#f0633a",
+      "--ink",
+      "#0a2f3f",
+      "--paper",
+      "#fff9e9",
       "--font-display",
-      "Space Grotesk",
+      "Archivo",
       "--font-body",
       "Inter",
       "--font-label",
       "DM Mono",
       "--display-weight",
-      "700",
+      "900",
       "--tracking",
-      "-0.03em",
+      "-0.01em",
       "--radius",
-      "12px",
+      "6px",
       "--cover-stops",
-      "#0f1b26,#1d2b3a,#3d5566",
+      "#0a2f3f,#0a2f3f,#14495f",
       "--cover-ink",
-      "#ffffff",
+      "#fff9e9",
       "--brand-soft",
-      "#eef2f5"
+      "#ffeef8",
+      "--accent-soft",
+      "#fdeec4",
+      "--muted",
+      "#4f6268"
     ],
     "preview": {
       "pages": [
@@ -47,55 +55,73 @@
       ],
       "landscape": true
     },
-    "note": "an unofficial spec sample with real brands and sourced figures; not affiliated with or endorsed by Outside Lands or Rivian"
+    "note": "an unofficial spec sample in Outside Lands' colors, with sourced figures and credited, freely licensed photos; not affiliated with or endorsed by Outside Lands or Rivian",
+    "images": [
+      "photos"
+    ],
+    "extra_css": ".slide h1, .slide h2 { text-transform: uppercase; } .slide h2 { font-size: 24pt; line-height: 1.08; } .title-slide img.photo { object-fit: cover; } .title-slide .shade { background: linear-gradient(180deg, rgba(10,47,63,.25) 0%, rgba(10,47,63,.55) 45%, rgba(10,47,63,.94) 100%); } .g-1-1-img { grid-template-columns: 1.1fr 1fr; align-items: start; } figure.ph { margin: 0; } figure.ph img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); } figure.ph figcaption { font-size: 8.5pt; color: var(--muted); margin-top: 4pt; } .kpi .v { color: var(--accent); } .chip-row span { background: #ffac03; border-color: #ffac03; color: #0a2f3f; }"
   },
   "activation-concepts": {
     "template": "concepts-template.html",
     "title": "Patagonia at Outside Lands — Activation Concepts — Unofficial Spec Sample",
     "pdf": "Sample-Patagonia-at-Outside-Lands-Activation-Concepts.pdf",
     "fonts": [
-      "Fraunces:400,600,700",
+      "Inter Tight:400,500,600",
       "Inter:400,500,600",
-      "DM Mono:400,500"
+      "Newsreader:400,500"
     ],
     "tokens": [
       "--brand",
-      "#1f3d2b",
+      "#191718",
       "--accent",
-      "#c8611d",
+      "#917c5a",
+      "--ink",
+      "#191718",
+      "--paper",
+      "#f6f1e9",
       "--font-display",
-      "Fraunces",
+      "Inter Tight",
       "--font-body",
       "Inter",
       "--font-label",
-      "DM Mono",
+      "Inter Tight",
       "--display-weight",
-      "600",
+      "500",
       "--tracking",
-      "-0.01em",
+      "-0.02em",
       "--radius",
-      "10px",
+      "4px",
       "--cover-stops",
-      "#1f3d2b,#2f5a3f,#7a6a3a",
+      "#191718,#293b4d",
       "--cover-ink",
-      "#ffffff"
+      "#ffffff",
+      "--brand-soft",
+      "#efe8d9",
+      "--accent-soft",
+      "#ebe3d3",
+      "--muted",
+      "#55524d"
     ],
     "preview": {
       "pages": [
         1,
+        2,
         3,
-        4,
-        5
+        4
       ],
       "captions": [
         "Title",
+        "The brief",
         "Guest journey",
-        "Floor plan and build",
-        "Budget and risks"
+        "Floor plan and build"
       ],
       "landscape": true
     },
-    "note": "an unofficial spec sample with real brands and sourced figures; not affiliated with or endorsed by Patagonia or Outside Lands"
+    "note": "an unofficial spec sample in Patagonia's colors, with sourced figures and credited, freely licensed photos; not affiliated with or endorsed by Patagonia or Outside Lands",
+    "images": [
+      "photos"
+    ],
+    "extra_css": ".title-slide img.photo { object-fit: cover; } .title-slide .shade { background: linear-gradient(180deg, rgba(25,23,24,.1) 0%, rgba(25,23,24,.45) 50%, rgba(25,23,24,.9) 100%); } .slide h2 { font-family: 'Newsreader', serif; font-weight: 500; letter-spacing: -0.01em; } .title-slide h1 { font-weight: 500; } .eyebrow { letter-spacing: .04em; } figure.ph { margin: 0; } figure.ph img { display: block; width: 100%; object-fit: cover; border-radius: var(--radius); } figure.ph.strip { margin-top: 16pt; } figure.ph.strip img { height: 1.55in; object-position: center 38%; } figure.ph figcaption { font-size: 9pt; color: var(--muted); margin-top: 5pt; }"
   },
   "project-quote": {
     "template": "quote-template.html",
@@ -142,8 +168,11 @@
         "Terms and sign-off"
       ]
     },
-    "extra_css": ".letterhead .studio, .doc-title { text-transform: uppercase; letter-spacing: .02em; } .total-box .v { font-size: 22pt; }",
-    "note": "a spec sample from Beautiful Engine to Outside Lands, not a real quote"
+    "extra_css": ".letterhead .studio, .doc-title { text-transform: uppercase; letter-spacing: .02em; } .total-box .v { font-size: 22pt; } .letterhead .studio { display:flex; align-items:center; gap:10pt; } .letterhead .studio img { height: 0.48in; }",
+    "note": "a spec sample from Beautiful Engine to Outside Lands, not a real quote",
+    "images": [
+      "photos"
+    ]
   },
   "build-spec": {
     "template": "spec-template.html",
@@ -193,25 +222,30 @@
     "title": "Remote — Application Prep — Sample",
     "pdf": "Sample-Remote-Senior-Brand-Designer-Application-Prep.pdf",
     "fonts": [
-      "Inter Tight:400,500,600,700",
-      "Inter:400,500,600",
+      "Geist:400,500,600,700",
       "DM Mono:400,500"
     ],
     "tokens": [
       "--brand",
-      "#1e293b",
+      "#14191e",
       "--accent",
-      "#2563eb",
+      "#617798",
+      "--ink",
+      "#14191e",
+      "--paper",
+      "#ffffff",
       "--font-display",
-      "Inter Tight",
+      "Geist",
       "--font-body",
-      "Inter",
+      "Geist",
       "--font-label",
       "DM Mono",
       "--display-weight",
-      "600",
+      "700",
       "--tracking",
-      "-0.02em",
+      "-0.03em",
+      "--radius",
+      "4px",
       "--footer",
       "Application prep · Senior Brand Designer, Remote · Sample"
     ],
@@ -225,47 +259,56 @@
         "Outreach, stories and hiring steps"
       ]
     },
-    "note": "a real job posting from Remote with a fictional applicant"
+    "note": "a real job posting from Remote with a fictional applicant, in Remote's colors"
   },
   "case-study": {
     "template": "case-study-template.html",
     "title": "ATHLOS — Case Study — Sample",
     "pdf": "Sample-ATHLOS-Case-Study.pdf",
     "fonts": [
-      "Inter Tight:400,500,600,700",
+      "Unbounded:700,900",
       "Inter:400,500,600",
       "DM Mono:400,500"
     ],
     "tokens": [
       "--brand",
-      "#2b0f2a",
+      "#0d040b",
       "--accent",
-      "#b3153f",
+      "#ff0044",
+      "--ink",
+      "#0d040b",
       "--font-display",
-      "Inter Tight",
+      "Unbounded",
       "--font-body",
       "Inter",
       "--font-label",
       "DM Mono",
       "--display-weight",
-      "700",
+      "900",
       "--tracking",
       "-0.03em",
       "--radius",
-      "10px"
+      "6px",
+      "--brand-soft",
+      "#f1f1f3"
     ],
     "preview": {
       "pages": [
         1,
-        2
+        2,
+        3
       ],
       "captions": [
-        "Story and deck wall",
-        "Insight, idea, process and results"
+        "Story and venue",
+        "Idea and pitch decks",
+        "Process and results"
       ]
     },
-    "extra_css": "figure svg { display:block; width:100%; height:auto; border-radius: var(--radius); } .results .v { white-space: nowrap; }",
-    "note": "a real project, written from beautifulengine.com"
+    "extra_css": "figure svg { display:block; width:100%; height:auto; border-radius: var(--radius); } .results .v { white-space: nowrap; color: var(--accent); } h1 { text-transform: uppercase; letter-spacing: -0.03em; } .hero-photo img { aspect-ratio: 16 / 8; object-fit: cover; object-position: center 60%; } @media print { h1 { font-size: 30pt; } h2 { font-size: 15pt; } .results .v { font-size: 16pt; } }",
+    "note": "a real project, written from beautifulengine.com, in ATHLOS colors with a credited, freely licensed venue photo",
+    "images": [
+      "photos"
+    ]
   },
   "brand-snapshot": {
     "template": "snapshot-template.html",
@@ -305,7 +348,7 @@
       "--footer",
       "Beautiful Engine · Brand Snapshot · Nov 2026"
     ],
-    "extra_css": ":root { --btn-radius: 999px; } .ui-demo .btn { background: #e86d52; color: #1d2238; box-shadow: 0 3pt 10pt rgba(232,109,82,.22); } .ui-demo .btn.alt { border: 1.1pt solid rgba(29,34,56,.25); box-shadow: none; } .band { background: #1d2238; color: #f3ebdd; } .band h1 { text-transform: uppercase; letter-spacing: .02em; } .tag.verified { background: #e3ead9; }",
+    "extra_css": ":root { --btn-radius: 999px; } .ui-demo .btn { background: #e86d52; color: #1d2238; box-shadow: 0 3pt 10pt rgba(232,109,82,.22); } .ui-demo .btn.alt { border: 1.1pt solid rgba(29,34,56,.25); box-shadow: none; } .band { background: #1d2238; color: #f3ebdd; } .band h1 { text-transform: uppercase; letter-spacing: .02em; } .tag.verified { background: #e3ead9; } .band { position: relative; } .band-logo { position: absolute; top: 16pt; right: 18pt; height: 0.62in; } .band h1, .band p { padding-right: 0.95in; }",
     "preview": {
       "pages": [
         1,
@@ -316,7 +359,10 @@
         "Logo, interface, voice and resources"
       ]
     },
-    "note": "a snapshot of beautifulengine.com"
+    "note": "a snapshot of beautifulengine.com",
+    "images": [
+      "photos"
+    ]
   },
   "print-listing-kit": {
     "template": "../../brand-snapshot/assets/snapshot-template.html",
@@ -359,7 +405,10 @@
         "Photo list and files"
       ]
     },
-    "extra_css": ".tags { display:flex; flex-wrap:wrap; gap:4pt; margin:4pt 0 8pt; } .tags span { font-family:var(--font-label); font-size:7.8pt; background:var(--brand-soft); color:var(--brand); padding:2pt 6pt; border-radius:3pt; } .listing { border-left:2.5pt solid var(--brand); padding:2pt 0 2pt 12pt; margin:4pt 0 12pt; } .listing .title { font-family:var(--font-display); font-weight:600; font-size:12.5pt; line-height:1.3; margin:2pt 0 2pt; } .count { font-family:var(--font-label); font-size:7.8pt; color:var(--good); } .hero-row { display:grid; grid-template-columns: 1fr 150pt; gap:16pt; align-items:center; } pre.readme { font-family:var(--font-label); font-size:8pt; background:var(--muted-soft); border-radius:var(--radius); padding:10pt 12pt; white-space:pre-wrap; margin:0; } ul.check { list-style:none; padding-left:0; } ul.check li::before { content:'☐ '; color:var(--muted); }",
-    "note": "a sample listing for a Beautiful Engine model"
+    "extra_css": ".tags { display:flex; flex-wrap:wrap; gap:4pt; margin:4pt 0 8pt; } .tags span { font-family:var(--font-label); font-size:7.8pt; background:var(--brand-soft); color:var(--brand); padding:2pt 6pt; border-radius:3pt; } .listing { border-left:2.5pt solid var(--brand); padding:2pt 0 2pt 12pt; margin:4pt 0 12pt; } .listing .title { font-family:var(--font-display); font-weight:600; font-size:12.5pt; line-height:1.3; margin:2pt 0 2pt; } .count { font-family:var(--font-label); font-size:7.8pt; color:var(--good); } .hero-row { display:grid; grid-template-columns: 1fr 150pt; gap:16pt; align-items:center; } pre.readme { font-family:var(--font-label); font-size:8pt; background:var(--muted-soft); border-radius:var(--radius); padding:10pt 12pt; white-space:pre-wrap; margin:0; } ul.check { list-style:none; padding-left:0; } ul.check li::before { content:'☐ '; color:var(--muted); } .band { position: relative; } .band-logo { position: absolute; top: 16pt; right: 18pt; height: 0.62in; } .band h1, .band p { padding-right: 0.95in; }",
+    "note": "a sample listing for a Beautiful Engine model",
+    "images": [
+      "photos"
+    ]
   }
 }
