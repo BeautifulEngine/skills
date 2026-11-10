@@ -1,0 +1,62 @@
+[
+ {
+  "name": "r2.jpg",
+  "title": "RivianR2.jpg",
+  "author": "Lcaa9",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:RivianR2.jpg",
+  "w": 1600,
+  "h": 1054
+ },
+ {
+  "name": "r2-side.jpg",
+  "title": "RivianR2SideRear.jpg",
+  "author": "Lcaa9",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:RivianR2SideRear.jpg",
+  "w": 1600,
+  "h": 1065
+ },
+ {
+  "name": "icahn-night.jpg",
+  "title": "Icahnstadium1.JPG",
+  "author": "Tom Paliswiat",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Icahnstadium1.JPG",
+  "w": 1600,
+  "h": 1067
+ },
+ {
+  "name": "icahn-day.jpg",
+  "title": "Icahn Stadium (60130p).jpg",
+  "author": "Rhododendrites",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Icahn_Stadium_(60130p).jpg",
+  "w": 1600,
+  "h": 947
+ },
+ {
+  "name": "stow-lake.jpg",
+  "title": "Golden Gate Park San Francisco December 2016 009.jpg",
+  "author": "King of Hearts",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Park_San_Francisco_December_2016_009.jpg",
+  "w": 1600,
+  "h": 1068
+ },
+ {
+  "name": "polo-field.jpg",
+  "title": "Polo Field Golden Gate Park.jpg",
+  "author": "Hlutz",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Polo_Field_Golden_Gate_Park.jpg",
+  "w": 1600,
+  "h": 810
+ }
+]
